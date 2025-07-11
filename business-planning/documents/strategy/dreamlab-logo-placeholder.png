@@ -1,0 +1,13 @@
+# Placeholder for DreamLab Logo
+
+This is a placeholder file for the DreamLab logo referenced in the LaTeX documents.
+
+To use the actual logo:
+1. Replace this file with your actual logo in PNG format
+2. Keep the filename as "dreamlab-logo-placeholder.png" or update all LaTeX documents
+3. Recommended dimensions: 800x200 pixels for optimal display
+
+The logo is referenced in the title pages of:
+- business-strategy-overview.tex
+- strategic-roadmap.tex  
+- governance-structure.tex

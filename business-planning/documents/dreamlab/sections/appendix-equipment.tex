@@ -1,0 +1,177 @@
+\section{Detailed Equipment Specifications}
+
+\subsection{Core AI Infrastructure}
+
+\subsubsection{NVIDIA DGX A100 System}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\textbf{Component} & \textbf{Specification} \\
+\midrule
+GPUs & 8x NVIDIA A100 80GB Tensor Core GPUs \\
+GPU Memory & 640GB total HBM2e memory \\
+CPU & Dual AMD EPYC 7742 64-core processors \\
+System Memory & 2TB DDR4 RAM \\
+Storage & 30TB NVMe SSD (8x 3.84TB U.2) \\
+Network & 8x 200Gb/s HDR InfiniBand (1.6Tb/s total) \\
+Performance & 5 petaFLOPS AI performance \\
+Software & NVIDIA AI Enterprise, Ubuntu Linux \\
+Support & 3-year NVIDIA Enterprise Support \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Student Workstations}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\textbf{Component} & \textbf{Specification per Workstation} \\
+\midrule
+GPU & NVIDIA RTX 4090 24GB or RTX 6000 Ada 48GB \\
+CPU & Intel Core i9-13900K or AMD Ryzen 9 7950X \\
+RAM & 64GB DDR5-5600 (expandable to 128GB) \\
+Storage & 2TB Gen4 NVMe SSD + 4TB HDD \\
+Display & Dual 27" 4K monitors \\
+Peripherals & Mechanical keyboard, precision mouse \\
+OS & Ubuntu 22.04 LTS / Windows 11 Pro dual boot \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Network Infrastructure}
+
+\subsubsection{Core Network}
+
+\begin{itemize}
+    \item \textbf{Internet}: 1Gbps leased line with 4G backup
+    \item \textbf{Core Switch}: Aruba 8320 48-port 10GbE
+    \item \textbf{Access Switches}: 4x Aruba 2930F 48-port PoE+
+    \item \textbf{Firewall}: Fortinet FortiGate 200F
+    \item \textbf{WiFi}: Aruba WiFi 6E access points throughout
+    \item \textbf{Storage Network}: Dedicated 10GbE SAN fabric
+\end{itemize}
+
+\subsubsection{Storage Systems}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lrrl}
+\toprule
+\textbf{System} & \textbf{Capacity} & \textbf{Performance} & \textbf{Purpose} \\
+\midrule
+Primary NAS & 200TB & 10GB/s read & Active projects \\
+Backup NAS & 400TB & 2GB/s & Automated backups \\
+Object Storage & 100TB & S3 compatible & Long-term archive \\
+Cloud Backup & Unlimited & Azure Blob & Disaster recovery \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Edge AI Development Kit}
+
+\subsubsection{Hardware Inventory}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{lXr}
+\toprule
+\textbf{Device} & \textbf{Use Case} & \textbf{Quantity} \\
+\midrule
+NVIDIA Jetson AGX Orin & Autonomous systems development & 10 \\
+Jetson Nano & Entry-level edge AI & 20 \\
+Intel Neural Compute Stick & Inference acceleration & 15 \\
+Google Coral Dev Board & TensorFlow Lite projects & 10 \\
+Raspberry Pi 4 (8GB) & IoT integration & 20 \\
+Arduino Portenta X8 & Embedded ML & 15 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Software Licenses}
+
+\subsubsection{Development Tools}
+
+\begin{itemize}
+    \item \textbf{NVIDIA}
+    \begin{itemize}
+        \item NVIDIA AI Enterprise (included with DGX)
+        \item CUDA Toolkit and cuDNN
+        \item TensorRT inference server
+        \item Triton Inference Server
+    \end{itemize}
+    
+    \item \textbf{Cloud Platforms}
+    \begin{itemize}
+        \item Microsoft Azure: \$50k annual credits
+        \item AWS Educate: \$25k annual credits
+        \item Google Cloud: \$20k startup credits
+    \end{itemize}
+    
+    \item \textbf{ML Frameworks}
+    \begin{itemize}
+        \item PyTorch Enterprise Support
+        \item TensorFlow Enterprise
+        \item JAX (open source)
+        \item Hugging Face Pro subscription
+    \end{itemize}
+    
+    \item \textbf{Development IDEs}
+    \begin{itemize}
+        \item JetBrains All Products Pack (15 licenses)
+        \item Visual Studio Code (free)
+        \item Jupyter Enterprise Gateway
+    \end{itemize}
+\end{itemize}
+
+\subsection{Specialised Equipment}
+
+\subsubsection{Computer Vision Lab}
+
+\begin{itemize}
+    \item 4x Intel RealSense D455 depth cameras
+    \item 2x FLIR thermal imaging cameras
+    \item 360-degree camera rig for dataset creation
+    \item Professional lighting setup
+    \item Green screen and motion capture markers
+\end{itemize}
+
+\subsubsection{Robotics Integration}
+
+\begin{itemize}
+    \item 2x Universal Robots UR5e collaborative robots
+    \item ROS development workstation
+    \item Simulation software (Gazebo, MuJoCo)
+    \item Sensor suite (LiDAR, ultrasonic, IMU)
+\end{itemize}
+
+\subsection{Supporting Infrastructure}
+
+\subsubsection{Audio/Visual Systems}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\textbf{Room} & \textbf{AV Equipment} \\
+\midrule
+Main Lab & 86" interactive display, ceiling speakers, PTZ camera \\
+Meeting Room & 65" display, video conferencing system, wireless presenting \\
+Each Workstation & Dual 27" 4K monitors, headphones \\
+Breakout Areas & 55" displays for collaboration \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Maintenance and Support}
+
+\begin{itemize}
+    \item \textbf{DGX A100}: 24/7 NVIDIA Enterprise Support
+    \item \textbf{Workstations}: Next business day on-site support
+    \item \textbf{Network}: 4-hour response time SLA
+    \item \textbf{Software}: Annual maintenance agreements
+    \item \textbf{Spare Parts}: 10\% inventory maintained on-site
+\end{itemize}

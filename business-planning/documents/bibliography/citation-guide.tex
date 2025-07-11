@@ -1,0 +1,187 @@
+\documentclass{businessdocs}
+
+\title{Citation and Bibliography Guide}
+\author{Documentation Team}
+\date{\today}
+
+\addbibresource{references.bib}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+This guide explains how to use citations and bibliography management in our business documentation suite. All documents use the \texttt{biblatex} package with author-year citation style, following UK English conventions.
+
+\section{Citation Commands}
+
+\subsection{Basic Citations}
+
+The following commands are available for citations:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Command} & \textbf{Output Example} \\
+\midrule
+\verb|\parencite{edtech2024}| & \parencite{edtech2024} \\
+\verb|\textcite{porter2021}| & \textcite{porter2021} \\
+\verb|\cite{ries2021}| & \cite{ries2021} \\
+\verb|\footcite{iso31000}| & Text with footnote\footcite{iso31000} \\
+\bottomrule
+\end{tabular}
+\caption{Basic citation commands}
+\end{table}
+
+\subsection{Multiple Citations}
+
+To cite multiple sources:
+\begin{itemize}
+    \item \verb|\parencite{edtech2024,ukskills2023}| produces \parencite{edtech2024,ukskills2023}
+    \item \verb|\textcite{brown2022,davis2023}| for narrative citations
+\end{itemize}
+
+\subsection{Page References}
+
+To include page numbers:
+\begin{itemize}
+    \item \verb|\parencite[45]{porter2021}| produces \parencite[45]{porter2021}
+    \item \verb|\parencite[see][45-47]{ries2021}| produces \parencite[see][45-47]{ries2021}
+\end{itemize}
+
+\section{Bibliography Categories}
+
+Our bibliography is organised into the following categories:
+
+\begin{keypoint}
+\begin{enumerate}
+    \item Market Research and Industry Reports
+    \item Technology and AI in Education
+    \item Business Strategy and Management
+    \item Financial Planning and Investment
+    \item Marketing and Customer Acquisition
+    \item Risk Management
+    \item Legal and Compliance
+    \item Industry Analysis
+    \item Entrepreneurship and Innovation
+    \item Project Management
+    \item Online Resources
+    \item Academic Research
+    \item Government Reports
+\end{enumerate}
+\end{keypoint}
+
+\section{Adding New References}
+
+To add a new reference to \texttt{references.bib}, use the appropriate entry type:
+
+\begin{verbatim}
+@article{newref2024,
+  author = {Author, A. and Writer, B.},
+  title = {Article Title in Title Case},
+  journal = {Journal Name},
+  year = {2024},
+  volume = {10},
+  number = {2},
+  pages = {123--145}
+}
+\end{verbatim}
+
+\section{Citation Style Examples}
+
+\subsection{In-Text Citations}
+
+According to \textcite{mckinsey2023}, the professional education market is experiencing rapid growth. This is supported by industry data \parencite{edtech2024} showing a 45\% year-on-year increase.
+
+\subsection{Block Quotes}
+
+For longer quotes, use the quote environment:
+
+\begin{quote}
+The rise of AI-powered adaptive learning systems represents a paradigm shift in how we approach professional education, moving from one-size-fits-all to truly personalised learning experiences \parencite[156]{aiadaptive2023}.
+\end{quote}
+
+\section{Common Citation Scenarios}
+
+\subsection{Market Data}
+When citing market size or growth figures:
+\begin{itemize}
+    \item The UK professional education market is valued at £15 billion \parencite{ukskills2023}
+    \item Growth projections suggest 25\% CAGR \parencite{edtech2024,deloitte2023}
+\end{itemize}
+
+\subsection{Technical References}
+For technical implementations:
+\begin{itemize}
+    \item Our risk framework follows \textcite{iso31000} guidelines
+    \item Agile methodology based on \textcite{agile2022}
+\end{itemize}
+
+\subsection{Strategic Frameworks}
+When discussing business strategy:
+\begin{itemize}
+    \item Competitive analysis using Porter's Five Forces \parencite{porter2021}
+    \item Lean startup principles \parencite{ries2021} guide our approach
+\end{itemize}
+
+\section{Bibliography Management}
+
+\subsection{Generating Bibliography}
+
+Add this command where you want the bibliography to appear:
+\begin{verbatim}
+\printbibliography
+\end{verbatim}
+
+To print only specific categories:
+\begin{verbatim}
+\printbibliography[keyword=market,title={Market Research}]
+\end{verbatim}
+
+\subsection{Citation Checking}
+
+Before finalising documents:
+\begin{enumerate}
+    \item Check all citations resolve correctly
+    \item Verify page numbers are accurate
+    \item Ensure consistent citation style
+    \item Update online resource access dates
+\end{enumerate}
+
+\section{Style Guidelines}
+
+\begin{keypoint}
+\textbf{UK English Conventions}:
+\begin{itemize}
+    \item Use single quotes for quotations
+    \item Place punctuation outside quotes unless part of the quotation
+    \item Use 'organisation' not 'organization'
+    \item Format dates as DD/MM/YYYY
+\end{itemize}
+\end{keypoint}
+
+\section{Troubleshooting}
+
+Common issues and solutions:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Issue} & \textbf{Solution} \\
+\midrule
+Citation undefined & Check spelling in .bib file \\
+Missing bibliography & Run biber after latex compilation \\
+Wrong citation style & Verify biblatex options in preamble \\
+Duplicate entries & Check for duplicate keys in .bib \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\printbibliography
+
+\end{document}

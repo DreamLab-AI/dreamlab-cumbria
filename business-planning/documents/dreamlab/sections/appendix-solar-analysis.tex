@@ -1,0 +1,249 @@
+\section{Solar Investment Analysis}
+
+\subsection{System Design Specifications}
+
+\subsubsection{Solar Array Configuration}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{lXr}
+\toprule
+\textbf{Component} & \textbf{Specification} & \textbf{Quantity} \\
+\midrule
+Solar Panels & Jinko Tiger Pro 72HC 545W & 22 panels \\
+Total Capacity & 11.99 kWp DC & 1 system \\
+Inverter & SolarEdge SE10K 3-phase & 1 unit \\
+Optimizers & SolarEdge P801 & 22 units \\
+Mounting & Ground-mount system & 1 set \\
+Battery Storage & Tesla Powerwall 2 (13.5kWh each) & 3 units \\
+Total Storage & 40.5 kWh usable capacity & - \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Expected Performance}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lrr}
+\toprule
+\textbf{Metric} & \textbf{Value} & \textbf{Notes} \\
+\midrule
+Annual Generation & 10,800 kWh & Based on local irradiance \\
+System Efficiency & 84\% & Including inverter losses \\
+Degradation Rate & 0.5\%/year & Premium panel warranty \\
+25-Year Output & 247,500 kWh & Total lifetime generation \\
+Carbon Offset & 5.4 tonnes/year & UK grid average \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Financial Analysis}
+
+\subsubsection{Investment Breakdown}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lrr}
+\toprule
+\textbf{Cost Component} & \textbf{Amount (£)} & \textbf{\% of Total} \\
+\midrule
+Solar Panels & 8,500 & 24.3\% \\
+Inverter \& Optimizers & 4,200 & 12.0\% \\
+Mounting Structure & 3,500 & 10.0\% \\
+Installation Labour & 4,800 & 13.7\% \\
+Electrical Work & 2,500 & 7.1\% \\
+Subtotal Solar & 23,500 & 67.1\% \\
+\midrule
+Battery Storage (3x) & 11,500 & 32.9\% \\
+\midrule
+\textbf{Total Investment} & \textbf{35,000} & \textbf{100\%} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Revenue and Savings Model}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    width=\textwidth,
+    height=8cm,
+    xlabel={Year},
+    ylabel={Cumulative Savings (£)},
+    legend pos=north west,
+    grid=major,
+    xmin=0, xmax=25,
+    ymin=-40000, ymax=160000
+]
+
+% Cumulative savings line
+\addplot[
+    color=dreamlab-green,
+    mark=none,
+    line width=2pt,
+    domain=0:25,
+    samples=26
+] {-35000 + 7200*x + 150*x^2};
+\addlegendentry{Cumulative Savings}
+
+% Break-even line
+\addplot[
+    color=accent-red,
+    dashed,
+    line width=1pt
+] coordinates {(0,0) (25,0)};
+\addlegendentry{Break-even}
+
+% Initial investment
+\addplot[
+    color=dreamlab-purple,
+    mark=*,
+    only marks
+] coordinates {(0,-35000)};
+\addlegendentry{Initial Investment}
+
+% Payback point
+\addplot[
+    color=dreamlab-orange,
+    mark=*,
+    only marks
+] coordinates {(4.5,0)};
+\addlegendentry{Payback Point}
+
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\subsubsection{Annual Cash Flow Analysis}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{Year} & \textbf{Energy Savings} & \textbf{SEG Income} & \textbf{Maintenance} & \textbf{Net Benefit} & \textbf{Cumulative} \\
+\midrule
+1 & £6,480 & £540 & (£200) & £6,820 & £6,820 \\
+2 & £6,804 & £567 & (£200) & £7,171 & £13,991 \\
+3 & £7,144 & £595 & (£200) & £7,539 & £21,530 \\
+4 & £7,501 & £625 & (£200) & £7,926 & £29,456 \\
+5 & £7,876 & £656 & (£200) & £8,332 & £37,788 \\
+\midrule
+\multicolumn{5}{r}{\textbf{5-Year Total:}} & \textbf{£37,788} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Environmental Impact}
+
+\subsubsection{Carbon Footprint Reduction}
+
+\begin{itemize}
+    \item \textbf{Annual CO₂ Savings}: 5.4 tonnes
+    \item \textbf{25-Year Total}: 135 tonnes CO₂
+    \item \textbf{Equivalent to}: Planting 6,200 trees
+    \item \textbf{Grid Independence}: 70-80\% self-sufficiency
+\end{itemize}
+
+\subsubsection{Sustainability Metrics}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{lXr}
+\toprule
+\textbf{Metric} & \textbf{Description} & \textbf{Value} \\
+\midrule
+Energy Payback & Time to generate manufacturing energy & 2.3 years \\
+Carbon Payback & Time to offset manufacturing carbon & 1.8 years \\
+Lifetime EROI & Energy return on investment & 11.2:1 \\
+Recycling Rate & End-of-life material recovery & 95\% \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Battery Storage Benefits}
+
+\subsubsection{Operational Advantages}
+
+\begin{enumerate}
+    \item \textbf{Time-of-Use Optimization}
+    \begin{itemize}
+        \item Store cheap overnight electricity
+        \item Use during peak pricing periods
+        \item Annual savings: £1,800
+    \end{itemize}
+    
+    \item \textbf{Grid Independence}
+    \begin{itemize}
+        \item 2-3 days autonomous operation
+        \item Protection from power outages
+        \item Critical for lab equipment protection
+    \end{itemize}
+    
+    \item \textbf{Load Balancing}
+    \begin{itemize}
+        \item Smooth out demand spikes
+        \item Reduce maximum demand charges
+        \item Enable smaller grid connection
+    \end{itemize}
+\end{enumerate}
+
+\subsubsection{Financial Model with Storage}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lrr}
+\toprule
+\textbf{Revenue Stream} & \textbf{Annual Value} & \textbf{25-Year Total} \\
+\midrule
+Self-consumption savings & £6,480 & £162,000 \\
+Time-of-use arbitrage & £1,800 & £45,000 \\
+SEG export payments & £540 & £13,500 \\
+Demand charge reduction & £600 & £15,000 \\
+Grid service payments & £300 & £7,500 \\
+\midrule
+\textbf{Total Benefits} & \textbf{£9,720} & \textbf{£243,000} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Risk Mitigation}
+
+\subsubsection{Technical Risks}
+
+\begin{itemize}
+    \item \textbf{Panel Degradation}: Premium panels with 25-year warranty
+    \item \textbf{Inverter Failure}: Extended warranty to 20 years
+    \item \textbf{Battery Degradation}: 70\% capacity warranty at 10 years
+    \item \textbf{Weather Damage}: Comprehensive insurance coverage
+\end{itemize}
+
+\subsubsection{Financial Risks}
+
+\begin{itemize}
+    \item \textbf{Electricity Price Risk}: Model assumes 5\% annual increase
+    \item \textbf{Policy Changes}: Current SEG rates locked for 2 years
+    \item \textbf{Technology Obsolescence}: Modular design allows upgrades
+\end{itemize}
+
+\subsection{Implementation Timeline}
+
+\begin{enumerate}
+    \item \textbf{Month 1}: System design and planning permission
+    \item \textbf{Month 2}: Equipment procurement
+    \item \textbf{Month 3}: Ground works and mounting
+    \item \textbf{Month 4}: Panel and inverter installation
+    \item \textbf{Month 5}: Battery installation and commissioning
+    \item \textbf{Month 6}: Grid connection and testing
+\end{enumerate}
+
+\subsection{Monitoring and Optimization}
+
+\begin{itemize}
+    \item Real-time monitoring dashboard
+    \item AI-powered generation forecasting
+    \item Automated battery charge/discharge optimization
+    \item Monthly performance reports
+    \item Annual system health checks
+    \item Integration with building management system
+\end{itemize}

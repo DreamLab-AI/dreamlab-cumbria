@@ -1,0 +1,198 @@
+\section{Risk Analysis}
+
+\subsection{Risk Matrix Overview}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+    % Grid
+    \draw[step=2cm,gray,very thin] (0,0) grid (8,8);
+    
+    % Axes
+    \draw[thick,->] (0,0) -- (8.5,0) node[anchor=north] {Impact};
+    \draw[thick,->] (0,0) -- (0,8.5) node[anchor=east] {Probability};
+    
+    % Labels
+    \node at (1,-0.5) {Low};
+    \node at (4,-0.5) {Medium};
+    \node at (7,-0.5) {High};
+    \node[rotate=90] at (-0.5,1) {Low};
+    \node[rotate=90] at (-0.5,4) {Medium};
+    \node[rotate=90] at (-0.5,7) {High};
+    
+    % Risk zones
+    \fill[dreamlab-green!20] (0,0) rectangle (2,2);
+    \fill[dreamlab-orange!20] (2,0) rectangle (6,6);
+    \fill[dreamlab-orange!30] (0,2) rectangle (2,6);
+    \fill[dreamlab-orange!30] (6,0) rectangle (8,2);
+    \fill[accent-red!20] (6,2) rectangle (8,8);
+    \fill[accent-red!20] (2,6) rectangle (6,8);
+    
+    % Risk points
+    \node[circle,fill=dreamlab-purple,text=white,minimum size=0.8cm] (R1) at (3,5) {R1};
+    \node[circle,fill=dreamlab-blue,text=white,minimum size=0.8cm] (R2) at (6.5,3) {R2};
+    \node[circle,fill=dreamlab-green,text=white,minimum size=0.8cm] (R3) at (1.5,1.5) {R3};
+    \node[circle,fill=dreamlab-orange,text=white,minimum size=0.8cm] (R4) at (4.5,4) {R4};
+    \node[circle,fill=dreamlab-grey,text=white,minimum size=0.8cm] (R5) at (2.5,3.5) {R5};
+    
+    % Legend
+    \node[anchor=west] at (9,7) {R1: Market Demand};
+    \node[anchor=west] at (9,6) {R2: Technology Obsolescence};
+    \node[anchor=west] at (9,5) {R3: Seasonal Variations};
+    \node[anchor=west] at (9,4) {R4: Competition};
+    \node[anchor=west] at (9,3) {R5: Staff Retention};
+\end{tikzpicture}
+\end{center}
+
+\subsection{Critical Risk Assessment}
+
+\subsubsection{Market and Commercial Risks}
+
+\begin{riskbox}
+\textbf{Risk}: Slower than expected AI training market adoption\\
+\textbf{Impact}: High - Could reduce revenue by 30-40\%\\
+\textbf{Probability}: Medium\\
+\textbf{Mitigation Strategies}:
+\begin{itemize}
+    \item Diversify into data science and analytics training
+    \item Develop entry-level programmes for SMEs
+    \item Create government-funded apprenticeship schemes
+    \item Expand online offering to reach wider market
+\end{itemize}
+\end{riskbox}
+
+\subsubsection{Technology Risks}
+
+\begin{riskbox}
+\textbf{Risk}: Rapid hardware obsolescence requiring early refresh\\
+\textbf{Impact}: High - £200k unplanned capital expenditure\\
+\textbf{Probability}: Medium\\
+\textbf{Mitigation Strategies}:
+\begin{itemize}
+    \item Lease vs buy strategy for some equipment
+    \item Vendor partnership for upgrade programmes
+    \item Cloud hybrid approach for peak capacity
+    \item Equipment refresh reserve fund (5\% revenue)
+\end{itemize}
+\end{riskbox}
+
+\subsubsection{Operational Risks}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{lXll}
+\toprule
+\textbf{Risk} & \textbf{Description} & \textbf{Impact} & \textbf{Mitigation} \\
+\midrule
+Key Person Loss & Lead instructor departure & High & Retention packages, succession planning \\
+Facility Damage & Fire, flood, or storm damage & High & Comprehensive insurance, backup site \\
+Cyber Security & Data breach or ransomware & Medium & ISO 27001, regular audits \\
+Supply Chain & Equipment delivery delays & Medium & Multiple vendors, buffer stock \\
+Rural Location & Transport disruptions & Low & Virtual options, transport service \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Financial Risk Management}
+
+\subsubsection{Cash Flow Risk}
+
+\begin{itemize}
+    \item \textbf{Risk}: Corporate clients delaying payment (60-90 days)
+    \item \textbf{Impact}: Working capital strain
+    \item \textbf{Mitigation}: 
+    \begin{itemize}
+        \item Invoice factoring facility (£100k)
+        \item 50\% deposit requirement
+        \item Credit insurance for large accounts
+        \item Diversified client base (no client >15\% revenue)
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Currency Risk}
+
+\begin{itemize}
+    \item \textbf{Risk}: USD equipment costs vs GBP revenue
+    \item \textbf{Impact}: 10-15\% cost variance potential
+    \item \textbf{Mitigation}: Forward contracts for major purchases
+\end{itemize}
+
+\subsection{Regulatory and Compliance Risks}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{lXl}
+\toprule
+\textbf{Area} & \textbf{Risk} & \textbf{Controls} \\
+\midrule
+Data Protection & GDPR compliance for student data & DPO appointed, policies in place \\
+Health \& Safety & Training facility accidents & H\&S officer, regular inspections \\
+Planning & Change of use restrictions & Full planning permission secured \\
+Tax & VAT treatment complexity & Professional tax advisors \\
+Employment & IR35 for contractors & Clear employment contracts \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Environmental and Sustainability Risks}
+
+\begin{itemize}
+    \item \textbf{Climate Risk}: Extreme weather affecting solar generation
+    \item \textbf{Grid Risk}: Rural power infrastructure limitations
+    \item \textbf{Reputation Risk}: Greenwashing accusations
+    \item \textbf{Mitigation}: Transparent reporting, grid backup, genuine commitment
+\end{itemize}
+
+\subsection{Risk Monitoring Framework}
+
+\begin{center}
+\begin{tikzpicture}[node distance=2cm]
+    % Define styles
+    \tikzstyle{process} = [rectangle, draw=dreamlab-purple, fill=dreamlab-purple!20, text width=3cm, text centered, minimum height=1cm]
+    \tikzstyle{arrow} = [thick,->,>=stealth]
+    
+    % Nodes
+    \node[process] (identify) {Risk Identification};
+    \node[process, right=of identify] (assess) {Risk Assessment};
+    \node[process, right=of assess] (mitigate) {Mitigation Planning};
+    \node[process, below=of mitigate] (monitor) {Continuous Monitoring};
+    \node[process, below=of assess] (report) {Monthly Reporting};
+    \node[process, below=of identify] (review) {Quarterly Review};
+    
+    % Arrows
+    \draw[arrow] (identify) -- (assess);
+    \draw[arrow] (assess) -- (mitigate);
+    \draw[arrow] (mitigate) -- (monitor);
+    \draw[arrow] (monitor) -- (report);
+    \draw[arrow] (report) -- (review);
+    \draw[arrow] (review) -- (identify);
+\end{tikzpicture}
+\end{center}
+
+\subsection{Contingency Planning}
+
+\subsubsection{Scenario Planning}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+\textbf{Scenario} & \textbf{Trigger} & \textbf{Action Plan} \\
+\midrule
+Best Case & 120\% revenue target & Accelerate Phase 2, hire ahead \\
+Base Case & 90-110\% target & Continue planned growth \\
+Downside & 70-90\% target & Delay Phase 3, focus online \\
+Worst Case & <70\% target & Pivot to pure online model \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Insurance Coverage}
+
+\begin{itemize}
+    \item \textbf{Property Insurance}: £2.5m building and contents
+    \item \textbf{Business Interruption}: 12 months coverage
+    \item \textbf{Professional Indemnity}: £5m limit
+    \item \textbf{Public Liability}: £10m limit
+    \item \textbf{Cyber Insurance}: £2m limit including breach response
+    \item \textbf{Key Person Life}: £1m on founder/CEO
+\end{itemize}

@@ -1,0 +1,293 @@
+\documentclass{businessdocs}
+
+\title{Project Timeline and Milestone Overview}
+\author{Project Management Office}
+\date{\today}
+
+\usepackage{rotating}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\begin{executivesummary}
+This document presents the comprehensive project timeline for the Business Excellence Initiative, detailing all major phases, milestones, and deliverables across a 24-month implementation period. The timeline integrates product development, market entry, and scaling activities with clear dependencies and resource allocations.
+\end{executivesummary}
+
+\section{Timeline Overview}
+
+The project spans 24 months, divided into four major phases:
+\begin{enumerate}
+    \item Foundation Phase (Months 1-6)
+    \item Development Phase (Months 7-12)
+    \item Market Entry Phase (Months 13-18)
+    \item Scaling Phase (Months 19-24)
+\end{enumerate}
+
+\section{Master Gantt Chart}
+
+\begin{sidewaysfigure}
+\centering
+\begin{ganttchart}[
+    x unit=0.6cm,
+    y unit title=0.8cm,
+    y unit chart=0.5cm,
+    vgrid,
+    hgrid,
+    title label font=\small\sffamily,
+    bar label font=\small,
+    group label font=\small\bfseries\sffamily,
+    milestone label font=\small\bfseries
+]{1}{24}
+    \gantttitle{Year 1}{12}
+    \gantttitle{Year 2}{12} \\
+    \gantttitlelist{1,...,24}{1} \\
+    
+    % Foundation Phase
+    \ganttgroup{Foundation Phase}{1}{6} \\
+    \ganttbar{Business Planning}{1}{2} \\
+    \ganttbar{Legal Setup}{1}{3} \\
+    \ganttbar{Team Recruitment}{2}{4} \\
+    \ganttbar{Infrastructure}{3}{5} \\
+    \ganttbar{Brand Development}{3}{6} \\
+    \ganttmilestone{Foundation Complete}{6} \\
+    
+    % Development Phase
+    \ganttgroup{Development Phase}{7}{12} \\
+    \ganttbar{Product Design}{7}{9} \\
+    \ganttbar{Platform Development}{8}{11} \\
+    \ganttbar{Content Creation}{9}{12} \\
+    \ganttbar{Testing \& QA}{10}{12} \\
+    \ganttbar{Pilot Programme}{11}{12} \\
+    \ganttmilestone{MVP Launch}{12} \\
+    
+    % Market Entry Phase
+    \ganttgroup{Market Entry Phase}{13}{18} \\
+    \ganttbar{Marketing Campaign}{13}{15} \\
+    \ganttbar{Sales Launch}{13}{18} \\
+    \ganttbar{Customer Onboarding}{14}{18} \\
+    \ganttbar{Partnership Development}{14}{17} \\
+    \ganttbar{Feedback Integration}{15}{18} \\
+    \ganttmilestone{Market Established}{18} \\
+    
+    % Scaling Phase
+    \ganttgroup{Scaling Phase}{19}{24} \\
+    \ganttbar{Geographic Expansion}{19}{22} \\
+    \ganttbar{Product Enhancement}{19}{24} \\
+    \ganttbar{Team Scaling}{20}{23} \\
+    \ganttbar{Series A Fundraising}{21}{23} \\
+    \ganttmilestone{Scale Achieved}{24} \\
+    
+    % Dependencies
+    \ganttlink{elem1}{elem3}
+    \ganttlink{elem2}{elem4}
+    \ganttlink{elem5}{elem7}
+    \ganttlink{elem9}{elem13}
+    \ganttlink{elem13}{elem17}
+\end{ganttchart}
+\caption{Master project timeline showing all phases and major milestones}
+\label{fig:master-timeline}
+\end{sidewaysfigure}
+
+\section{Phase Details}
+
+\subsection{Foundation Phase (Months 1-6)}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Activity} & \textbf{Duration} & \textbf{Resources} & \textbf{Deliverables} \\
+\midrule
+Business Planning & 2 months & Founders, Advisors & Business plan, Financial model \\
+Legal Setup & 3 months & Legal team & Company registration, IP protection \\
+Team Recruitment & 3 months & HR, Founders & Core team of 8-10 people \\
+Infrastructure & 3 months & IT team & Cloud setup, Security protocols \\
+Brand Development & 4 months & Marketing team & Brand identity, Guidelines \\
+\bottomrule
+\end{tabular}
+\caption{Foundation phase activities and deliverables}
+\end{table}
+
+\subsubsection{Critical Milestones}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    \draw[thick,corporate-blue] (0,0) -- (12,0);
+    \milestone{0}{0}{M1}
+    \milestone{2}{0}{M2}
+    \milestone{4}{0}{M3}
+    \milestone{6}{0}{M4}
+    \milestone{8}{0}{M5}
+    \milestone{10}{0}{M6}
+    \milestone{12}{0}{M7}
+    
+    \node[below] at (0,-0.5) {\small Start};
+    \node[below] at (2,-0.5) {\small Legal};
+    \node[below] at (4,-0.5) {\small Team};
+    \node[below] at (6,-0.5) {\small Brand};
+    \node[below] at (8,-0.5) {\small Infra};
+    \node[below] at (10,-0.5) {\small Ready};
+    \node[below] at (12,-0.5) {\small Launch};
+\end{tikzpicture}
+\end{center}
+
+\subsection{Development Phase (Months 7-12)}
+
+\begin{ganttchart}[
+    x unit=1.2cm,
+    y unit title=0.6cm,
+    y unit chart=0.45cm,
+    vgrid,
+    title label font=\small\sffamily,
+    bar label font=\footnotesize
+]{7}{12}
+    \gantttitle{Development Phase Detail}{6} \\
+    \gantttitlelist{7,...,12}{1} \\
+    
+    \ganttbar{Requirements Analysis}{7}{8} \\
+    \ganttbar{System Architecture}{7}{8} \\
+    \ganttbar{Database Design}{8}{9} \\
+    \ganttbar{Frontend Development}{8}{11} \\
+    \ganttbar{Backend Development}{8}{11} \\
+    \ganttbar{API Integration}{9}{10} \\
+    \ganttbar{Security Implementation}{10}{11} \\
+    \ganttbar{Performance Testing}{11}{12} \\
+    \ganttbar{User Acceptance Testing}{11}{12} \\
+    \ganttmilestone{Development Complete}{12}
+\end{ganttchart}
+
+\subsection{Market Entry Phase (Months 13-18)}
+
+Key activities during market entry:
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=2.5cm]
+    % Central node
+    \node[circle,draw=corporate-blue,fill=corporate-lightblue,minimum size=2cm,align=center] (center) {\bfseries Market\\Entry};
+    
+    % Surrounding activities
+    \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,above of=center] (marketing) {Marketing\\Campaign};
+    \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,right of=center] (sales) {Sales\\Launch};
+    \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,below of=center] (onboard) {Customer\\Onboarding};
+    \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,left of=center] (partner) {Partnership\\Development};
+    
+    % Connections
+    \draw[->,thick,corporate-blue] (center) -- (marketing);
+    \draw[->,thick,corporate-blue] (center) -- (sales);
+    \draw[->,thick,corporate-blue] (center) -- (onboard);
+    \draw[->,thick,corporate-blue] (center) -- (partner);
+\end{tikzpicture}
+\caption{Market entry phase key activities}
+\end{figure}
+
+\subsection{Scaling Phase (Months 19-24)}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+\textbf{Activity} & \textbf{M19} & \textbf{M20} & \textbf{M21} & \textbf{M22} & \textbf{M23} & \textbf{M24} \\
+\midrule
+Geographic Expansion & \checkmark & \checkmark & \checkmark & \checkmark & & \\
+Product Enhancement & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
+Team Scaling & & \checkmark & \checkmark & \checkmark & \checkmark & \\
+Series A Fundraising & & & \checkmark & \checkmark & \checkmark & \\
+\bottomrule
+\end{tabular}
+\caption{Scaling phase activity timeline}
+\end{table}
+
+\section{Resource Allocation Timeline}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+    \begin{axis}[
+        width=\textwidth,
+        height=8cm,
+        xlabel={Month},
+        ylabel={Team Size},
+        grid=major,
+        legend pos=north west,
+        ymin=0,
+        ymax=60
+    ]
+    \addplot[color=corporate-blue,mark=*,thick] coordinates {
+        (1,3) (2,5) (3,8) (4,10) (5,12) (6,15)
+        (7,18) (8,22) (9,25) (10,28) (11,30) (12,32)
+        (13,35) (14,38) (15,40) (16,42) (17,44) (18,45)
+        (19,48) (20,50) (21,52) (22,54) (23,56) (24,58)
+    };
+    \addlegendentry{Total Team Size}
+    
+    \addplot[color=accent-green,mark=square*,thick] coordinates {
+        (1,2) (2,3) (3,4) (4,5) (5,6) (6,7)
+        (7,10) (8,12) (9,14) (10,15) (11,16) (12,16)
+        (13,17) (14,18) (15,18) (16,19) (17,20) (18,20)
+        (19,22) (20,23) (21,24) (22,25) (23,26) (24,28)
+    };
+    \addlegendentry{Technical Team}
+    
+    \addplot[color=accent-orange,mark=triangle*,thick] coordinates {
+        (1,1) (2,1) (3,2) (4,2) (5,3) (6,4)
+        (7,4) (8,5) (9,6) (10,7) (11,8) (12,10)
+        (13,12) (14,14) (15,15) (16,16) (17,17) (18,18)
+        (19,18) (20,19) (21,20) (22,21) (23,22) (24,22)
+    };
+    \addlegendentry{Sales \& Marketing}
+    \end{axis}
+\end{tikzpicture}
+\caption{Projected team growth over 24 months}
+\end{figure}
+
+\section{Critical Path Analysis}
+
+The critical path through the project includes:
+
+\begin{enumerate}
+    \item Business planning and legal setup (3 months)
+    \item Core team recruitment (2 months)
+    \item Product design and architecture (3 months)
+    \item Platform development (4 months)
+    \item Testing and pilot programme (2 months)
+    \item Marketing campaign launch (2 months)
+    \item Customer acquisition ramp-up (6 months)
+    \item Series A fundraising (3 months)
+\end{enumerate}
+
+Total critical path duration: 24 months with 1 month buffer.
+
+\section{Risk Mitigation Timeline}
+
+\begin{riskbox}
+Key timeline risks and mitigation strategies:
+\begin{itemize}
+    \item \textbf{Development delays}: 2-month buffer built into development phase
+    \item \textbf{Recruitment challenges}: Early start on hiring, use of contractors
+    \item \textbf{Market entry timing}: Flexible launch window between months 12-14
+    \item \textbf{Fundraising delays}: Alternative funding sources identified
+\end{itemize}
+\end{riskbox}
+
+\section{Success Metrics by Phase}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}llr@{}}
+\toprule
+\textbf{Phase} & \textbf{Key Metric} & \textbf{Target} \\
+\midrule
+Foundation & Team hired & 10 people \\
+Development & Platform ready & 100\% complete \\
+Market Entry & Customers acquired & 1,000 \\
+Scaling & Revenue achieved & \pounds{2,500,000} \\
+\bottomrule
+\end{tabular}
+\caption{Success metrics for each project phase}
+\end{table}
+
+\end{document}

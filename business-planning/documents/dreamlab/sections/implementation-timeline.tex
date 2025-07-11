@@ -1,0 +1,215 @@
+\section{Implementation Timeline}
+
+\subsection{Master Implementation Schedule}
+
+\begin{center}
+\begin{ganttchart}[
+    hgrid,
+    vgrid,
+    x unit=0.7cm,
+    y unit title=0.7cm,
+    y unit chart=0.6cm,
+    bar/.style={fill=dreamlab-blue},
+    group/.style={fill=dreamlab-purple},
+    milestone/.style={fill=dreamlab-orange},
+    link/.style={->,thick,dreamlab-green}
+]{1}{24}
+    \gantttitle{Year 1}{12}
+    \gantttitle{Year 2}{12} \\
+    \gantttitlelist{1,...,24}{1} \\
+    
+    % Phase 1: Foundation
+    \ganttgroup{Phase 1: Foundation}{1}{6} \\
+    \ganttbar{Company Setup}{1}{2} \\
+    \ganttbar{Funding Secured}{2}{3} \\
+    \ganttbar{Property Acquisition}{3}{4} \\
+    \ganttbar{Planning Permission}{3}{5} \\
+    \ganttmilestone{Legal Complete}{5} \\
+    
+    % Phase 2: Lab Development
+    \ganttgroup{Phase 2: Lab Build}{5}{12} \\
+    \ganttbar{Lab Construction}{5}{8} \\
+    \ganttbar{Equipment Procurement}{6}{9} \\
+    \ganttbar{IT Infrastructure}{8}{10} \\
+    \ganttbar{Testing \& Setup}{10}{11} \\
+    \ganttmilestone{Lab Operational}{12} \\
+    
+    % Phase 3: Operations Launch
+    \ganttgroup{Phase 3: Launch}{10}{16} \\
+    \ganttbar{Staff Recruitment}{10}{12} \\
+    \ganttbar{Curriculum Development}{11}{13} \\
+    \ganttbar{Marketing Campaign}{12}{16} \\
+    \ganttbar{First Courses}{13}{16} \\
+    \ganttmilestone{Revenue Positive}{16} \\
+    
+    % Phase 4: Accommodation
+    \ganttgroup{Phase 4: Accommodation}{13}{20} \\
+    \ganttbar{Renovation Planning}{13}{14} \\
+    \ganttbar{Construction Work}{15}{18} \\
+    \ganttbar{Interior Fit-out}{18}{19} \\
+    \ganttbar{Holiday Let Launch}{20}{24} \\
+    \ganttmilestone{Full Operation}{20} \\
+    
+    % Phase 5: Sustainability
+    \ganttgroup{Phase 5: Green Tech}{18}{24} \\
+    \ganttbar{Solar Installation}{18}{20} \\
+    \ganttbar{EV Infrastructure}{20}{21} \\
+    \ganttbar{Landscaping}{21}{23} \\
+    \ganttmilestone{Carbon Neutral}{24}
+    
+    % Links
+    \ganttlink{elem1}{elem6}
+    \ganttlink{elem8}{elem12}
+    \ganttlink{elem14}{elem18}
+\end{ganttchart}
+\end{center}
+
+\subsection{Critical Path Analysis}
+
+\subsubsection{Key Dependencies}
+
+\begin{center}
+\begin{tikzpicture}[node distance=2.5cm]
+    \tikzstyle{critical} = [rectangle, draw=accent-red, fill=accent-red!20, text width=3cm, text centered, minimum height=1cm]
+    \tikzstyle{normal} = [rectangle, draw=dreamlab-blue, fill=dreamlab-blue!20, text width=3cm, text centered, minimum height=1cm]
+    \tikzstyle{arrow} = [thick,->,>=stealth]
+    
+    % Critical path nodes
+    \node[critical] (funding) {Secure Funding};
+    \node[critical, right=of funding] (property) {Property Ready};
+    \node[critical, right=of property] (lab) {Lab Equipment};
+    \node[critical, below=of lab] (staff) {Key Staff Hired};
+    \node[critical, left=of staff] (launch) {First Course};
+    
+    % Supporting nodes
+    \node[normal, above=of property] (planning) {Planning Permission};
+    \node[normal, below=of funding] (marketing) {Marketing Launch};
+    
+    % Arrows
+    \draw[arrow, accent-red, line width=2pt] (funding) -- (property);
+    \draw[arrow, accent-red, line width=2pt] (property) -- (lab);
+    \draw[arrow, accent-red, line width=2pt] (lab) -- (staff);
+    \draw[arrow, accent-red, line width=2pt] (staff) -- (launch);
+    \draw[arrow] (planning) -- (property);
+    \draw[arrow] (marketing) -- (launch);
+\end{tikzpicture}
+\end{center}
+
+\subsection{Detailed Phase Breakdowns}
+
+\subsubsection{Phase 1: Foundation (Months 1-6)}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{lXll}
+\toprule
+\textbf{Task} & \textbf{Description} & \textbf{Duration} & \textbf{Owner} \\
+\midrule
+Company Formation & Register Ltd, VAT, insurance & 2 weeks & CEO \\
+Investor Outreach & Pitch deck, meetings, due diligence & 8 weeks & CEO/CFO \\
+Property Search & Identify and negotiate purchase & 6 weeks & COO \\
+Legal Framework & Contracts, employment, IP & 4 weeks & Legal \\
+Grant Applications & Welsh Gov, EU funding & 8 weeks & CFO \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Phase 2: Laboratory Development (Months 5-12)}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{lXrr}
+\toprule
+\textbf{Component} & \textbf{Specifications} & \textbf{Lead Time} & \textbf{Cost} \\
+\midrule
+Lab Construction & 200m² training space & 12 weeks & £85,000 \\
+DGX A100 & NVIDIA flagship system & 8 weeks & £150,000 \\
+Workstations & 12x high-spec PCs & 4 weeks & £60,000 \\
+Network & 10Gb fibre, switching & 6 weeks & £25,000 \\
+Security & Access control, CCTV & 3 weeks & £15,000 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Phase 3: Operations Launch (Months 10-16)}
+
+Key recruitment timeline:
+\begin{itemize}
+    \item \textbf{Month 10}: Head of Training (£65k package)
+    \item \textbf{Month 11}: Lead AI Instructor (£55k)
+    \item \textbf{Month 11}: Operations Manager (£45k)
+    \item \textbf{Month 12}: Junior Instructors x2 (£35k each)
+    \item \textbf{Month 13}: Admin/Marketing (£28k)
+\end{itemize}
+
+\subsection{Key Performance Indicators}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{llrr}
+\toprule
+\textbf{Milestone} & \textbf{KPI} & \textbf{Target} & \textbf{Date} \\
+\midrule
+Lab Launch & Equipment operational & 100\% & Month 12 \\
+First Course & Students enrolled & 8+ & Month 13 \\
+Q4 Revenue & Training income & £35k & Month 15 \\
+Utilisation & Lab capacity & 40\% & Month 18 \\
+Break-even & Monthly P\&L & £0 & Month 20 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Resource Allocation}
+
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[
+        ybar stacked,
+        width=\textwidth,
+        height=8cm,
+        xlabel={Quarter},
+        ylabel={FTE Staff},
+        legend pos=north west,
+        symbolic x coords={Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8},
+        xtick=data,
+        ymin=0,
+        ymax=15
+    ]
+    
+    \addplot+[ybar, fill=dreamlab-purple] coordinates {
+        (Q1,1) (Q2,1) (Q3,2) (Q4,2) (Q5,2) (Q6,2) (Q7,2) (Q8,2)
+    };
+    \addplot+[ybar, fill=dreamlab-blue] coordinates {
+        (Q1,0) (Q2,0) (Q3,1) (Q4,2) (Q5,3) (Q6,4) (Q7,5) (Q8,5)
+    };
+    \addplot+[ybar, fill=dreamlab-green] coordinates {
+        (Q1,1) (Q2,1) (Q3,1) (Q4,2) (Q5,2) (Q6,3) (Q7,3) (Q8,3)
+    };
+    \addplot+[ybar, fill=dreamlab-orange] coordinates {
+        (Q1,0) (Q2,0) (Q3,0) (Q4,1) (Q5,1) (Q6,2) (Q7,2) (Q8,2)
+    };
+    
+    \legend{Management, Instructors, Operations, Marketing}
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+
+\subsection{Quality Assurance Checkpoints}
+
+\begin{enumerate}
+    \item \textbf{Month 6}: Funding secured, property purchased
+    \item \textbf{Month 9}: Lab construction 50\% complete
+    \item \textbf{Month 12}: Equipment tested and operational
+    \item \textbf{Month 14}: First course delivered successfully
+    \item \textbf{Month 18}: 25+ corporate clients acquired
+    \item \textbf{Month 24}: Full facility operational, carbon neutral
+\end{enumerate}
+
+\subsection{Contingency Buffers}
+
+\begin{itemize}
+    \item \textbf{Time Buffer}: 20\% added to all construction timelines
+    \item \textbf{Cost Buffer}: 15\% contingency on all capital items
+    \item \textbf{Resource Buffer}: Cross-training for key roles
+    \item \textbf{Supplier Buffer}: Alternative vendors identified
+\end{itemize}

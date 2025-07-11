@@ -1,0 +1,591 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+
+% Theme and colour setup
+\usetheme{Madrid}
+\usecolortheme{whale}
+
+% Package imports
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[UKenglish]{babel}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{eurosym}
+\usepackage{fontspec}
+\usepackage{microtype}
+
+% TikZ libraries
+\usetikzlibrary{shapes,arrows,positioning,calc,patterns,decorations.pathreplacing,shadows}
+\pgfplotsset{compat=1.18}
+
+% Corporate colours
+\definecolor{corporate-blue}{RGB}{0,48,87}
+\definecolor{corporate-lightblue}{RGB}{70,130,180}
+\definecolor{corporate-grey}{RGB}{128,128,128}
+\definecolor{accent-green}{RGB}{46,125,50}
+\definecolor{accent-orange}{RGB}{255,152,0}
+
+% Beamer colour customisation
+\setbeamercolor{structure}{fg=corporate-blue}
+\setbeamercolor{frametitle}{bg=corporate-blue,fg=white}
+\setbeamercolor{title}{bg=corporate-blue,fg=white}
+\setbeamercolor{block title}{bg=corporate-lightblue,fg=white}
+\setbeamercolor{block body}{bg=corporate-lightblue!10}
+
+% Font setup
+\setmainfont{TeX Gyre Heros}
+\setsansfont{TeX Gyre Heros}
+
+% Remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% Footline customisation
+\setbeamertemplate{footline}{
+    \leavevmode%
+    \hbox{%
+    \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+        \usebeamerfont{author in head/foot}\insertshortauthor
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+        \usebeamerfont{title in head/foot}\insertshorttitle
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+        \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+        \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+    \end{beamercolorbox}}%
+    \vskip0pt%
+}
+
+% Financial formatting
+\sisetup{
+    group-separator={,},
+    group-minimum-digits=3
+}
+\newcommand{\pounds}[1]{\pounds\num{#1}}
+
+% Title information
+\title{Business Excellence Initiative}
+\subtitle{Revolutionising Professional Education}
+\author{TechVenture Ltd}
+\date{Investor Presentation 2024}
+\institute{Series A Fundraising}
+
+\begin{document}
+
+% Title slide
+\begin{frame}
+\titlepage
+\end{frame}
+
+% Agenda
+\begin{frame}{Agenda}
+\tableofcontents
+\end{frame}
+
+\section{Executive Summary}
+
+\begin{frame}{Investment Opportunity}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{block}{The Opportunity}
+\begin{itemize}
+    \item \pounds{15B} UK professional education market
+    \item 45\% annual growth in online learning
+    \item Underserved mid-career professionals
+    \item Scalable SaaS platform
+\end{itemize}
+\end{block}
+
+\column{0.5\textwidth}
+\begin{block}{The Ask}
+\begin{itemize}
+    \item Raising \pounds{5M} Series A
+    \item 20\% equity stake
+    \item \pounds{25M} pre-money valuation
+    \item Use: Product development \& market expansion
+\end{itemize}
+\end{block}
+\end{columns}
+
+\vspace{1em}
+\begin{center}
+\Large\textbf{3x projected return in 3 years}
+\end{center}
+\end{frame}
+
+\section{Problem \& Solution}
+
+\begin{frame}{The Problem}
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+    % Problem statement box
+    \node[rectangle,draw=accent-orange,fill=accent-orange!20,line width=2pt,minimum width=10cm,minimum height=2cm,align=center] at (0,3) {
+        \Large\textbf{78\% of professionals struggle to find}\\
+        \Large\textbf{relevant, high-quality upskilling opportunities}
+    };
+    
+    % Supporting issues
+    \node[circle,draw=corporate-blue,fill=corporate-lightblue!30,minimum size=2.5cm,align=center] at (-4,0) {
+        \textbf{Outdated}\\Content
+    };
+    
+    \node[circle,draw=corporate-blue,fill=corporate-lightblue!30,minimum size=2.5cm,align=center] at (0,0) {
+        \textbf{Poor}\\Engagement
+    };
+    
+    \node[circle,draw=corporate-blue,fill=corporate-lightblue!30,minimum size=2.5cm,align=center] at (4,0) {
+        \textbf{No Career}\\Impact
+    };
+    
+    % Arrows
+    \draw[->,thick,corporate-grey] (-4,1.2) -- (-2,2.3);
+    \draw[->,thick,corporate-grey] (0,1.2) -- (0,2.3);
+    \draw[->,thick,corporate-grey] (4,1.2) -- (2,2.3);
+\end{tikzpicture}
+\end{center}
+
+\vspace{1em}
+\begin{itemize}
+    \item Traditional education fails mid-career professionals
+    \item Generic courses lack industry relevance
+    \item No measurable career outcomes
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Our Solution}
+\begin{columns}
+\column{0.6\textwidth}
+\includegraphics[width=\textwidth]{platform-mockup.png}
+
+\column{0.4\textwidth}
+\begin{block}{AI-Powered Learning Platform}
+\begin{itemize}
+    \item Personalised learning paths
+    \item Industry-specific content
+    \item Real-world projects
+    \item Career coaching integration
+    \item Measurable outcomes
+\end{itemize}
+\end{block}
+\end{columns}
+
+\vspace{1em}
+\begin{center}
+\colorbox{accent-green!30}{\textbf{92\% learner satisfaction rate}}
+\end{center}
+\end{frame}
+
+\section{Market Opportunity}
+
+\begin{frame}{Market Size \& Growth}
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[
+        width=0.9\textwidth,
+        height=0.7\textheight,
+        ybar,
+        bar width=20pt,
+        xlabel={Year},
+        ylabel={Market Size (\pounds billions)},
+        ymin=0,
+        ymax=30,
+        xtick=data,
+        nodes near coords,
+        nodes near coords align={vertical},
+        grid=major,
+        grid style={dashed,gray!30}
+    ]
+    \addplot[fill=corporate-blue] coordinates {
+        (2022,12) (2023,15) (2024,19) (2025,23) (2026,28)
+    };
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{itemize}
+    \item UK professional education market growing at 25\% CAGR
+    \item Accelerated by remote work trends
+    \item Increasing employer investment in upskilling
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Target Market Segments}
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    % Segment circles
+    \node[circle,draw=corporate-blue,fill=corporate-lightblue!30,minimum size=3cm] at (0,2) {
+        \textbf{Tech}\\Professionals\\(35\%)
+    };
+    
+    \node[circle,draw=corporate-blue,fill=corporate-lightblue!30,minimum size=3cm] at (4,2) {
+        \textbf{Finance}\\Sector\\(25\%)
+    };
+    
+    \node[circle,draw=corporate-blue,fill=corporate-lightblue!30,minimum size=3cm] at (8,2) {
+        \textbf{Healthcare}\\Workers\\(20\%)
+    };
+    
+    \node[circle,draw=corporate-blue,fill=corporate-lightblue!30,minimum size=3cm] at (2,-1) {
+        \textbf{Creative}\\Industries\\(10\%)
+    };
+    
+    \node[circle,draw=corporate-blue,fill=corporate-lightblue!30,minimum size=3cm] at (6,-1) {
+        \textbf{Other}\\Sectors\\(10\%)
+    };
+    
+    % TAM box
+    \node[rectangle,draw=accent-green,fill=accent-green!20,line width=2pt,minimum width=8cm,minimum height=1.5cm] at (4,-3.5) {
+        \Large\textbf{TAM: \pounds{4.2B} | SAM: \pounds{1.8B} | SOM: \pounds{180M}}
+    };
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\section{Business Model}
+
+\begin{frame}{Revenue Model}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{block}{B2C Subscriptions}
+\begin{itemize}
+    \item Basic: \pounds{29/month
+    \item Professional: \pounds{79/month
+    \item Premium: \pounds{149/month
+\end{itemize}
+\end{block}
+
+\begin{block}{B2B Enterprise}
+\begin{itemize}
+    \item Team licences: \pounds{99/user/month
+    \item Custom content creation
+    \item White-label solutions
+\end{itemize}
+\end{block}
+
+\column{0.5\textwidth}
+\begin{tikzpicture}
+    \begin{axis}[
+        width=\textwidth,
+        height=6cm,
+        xlabel={Quarter},
+        ylabel={MRR (\pounds'000)},
+        legend pos=north west,
+        grid=major,
+        grid style={dashed,gray!30}
+    ]
+    \addplot[color=corporate-blue,mark=*,thick] coordinates {
+        (1,50) (2,85) (3,140) (4,220) (5,350) (6,500) (7,720) (8,1000)
+    };
+    \addlegendentry{Projected MRR}
+    \end{axis}
+\end{tikzpicture}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Unit Economics}
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Metric} & \textbf{Current} & \textbf{Target (Year 2)} \\
+\midrule
+Customer Acquisition Cost (CAC) & \pounds{150} & \pounds{100} \\
+Customer Lifetime Value (CLV) & \pounds{1,200} & \pounds{2,400} \\
+CLV:CAC Ratio & 8:1 & 24:1 \\
+Gross Margin & 75\% & 85\% \\
+Monthly Churn Rate & 5\% & 2.5\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{1em}
+\begin{block}{Key Drivers}
+\begin{itemize}
+    \item High gross margins due to digital delivery
+    \item Strong network effects driving down CAC
+    \item Increasing CLV through upsells and retention
+\end{itemize}
+\end{block}
+\end{frame}
+
+\section{Traction \& Validation}
+
+\begin{frame}{Current Traction}
+\begin{columns}
+\column{0.33\textwidth}
+\begin{center}
+\begin{tikzpicture}
+    \node[circle,draw=accent-green,fill=accent-green!20,line width=3pt,minimum size=3cm,align=center] {
+        \LARGE\textbf{5,000}\\[0.3em]
+        \large Active Users
+    };
+\end{tikzpicture}
+\end{center}
+
+\column{0.33\textwidth}
+\begin{center}
+\begin{tikzpicture}
+    \node[circle,draw=accent-orange,fill=accent-orange!20,line width=3pt,minimum size=3cm,align=center] {
+        \LARGE\textbf{\pounds{150K}}\\[0.3em]
+        \large MRR
+    };
+\end{tikzpicture}
+\end{center}
+
+\column{0.33\textwidth}
+\begin{center}
+\begin{tikzpicture}
+    \node[circle,draw=corporate-blue,fill=corporate-lightblue!20,line width=3pt,minimum size=3cm,align=center] {
+        \LARGE\textbf{45\%}\\[0.3em]
+        \large MoM Growth
+    };
+\end{tikzpicture}
+\end{center}
+\end{columns}
+
+\vspace{1em}
+\begin{itemize}
+    \item 15 enterprise clients signed
+    \item 92\% user satisfaction score
+    \item 3 industry awards won
+    \item Featured in TechCrunch, Forbes
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Customer Success Stories}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{block}{Sarah Chen - Tech Professional}
+\centering
+\includegraphics[width=0.4\textwidth]{avatar1.png}\\
+\vspace{0.5em}
+\textit{"Promoted to Senior Developer after completing the advanced React course. 40\% salary increase!"}
+\end{block}
+
+\column{0.5\textwidth}
+\begin{block}{James Williams - Finance Manager}
+\centering
+\includegraphics[width=0.4\textwidth]{avatar2.png}\\
+\vspace{0.5em}
+\textit{"The data analytics programme transformed my career. Now leading digital transformation at my firm."}
+\end{block}
+\end{columns}
+
+\vspace{1em}
+\begin{center}
+\colorbox{accent-green!30}{\textbf{87\% of learners report career advancement within 6 months}}
+\end{center}
+\end{frame}
+
+\section{Go-to-Market Strategy}
+
+\begin{frame}{Customer Acquisition Strategy}
+\begin{center}
+\begin{tikzpicture}[node distance=2cm]
+    % Funnel stages
+    \node[trapezium,draw=corporate-blue,fill=corporate-lightblue!30,minimum width=8cm,minimum height=1cm] (aware) {Awareness: Content Marketing, SEO, Partnerships};
+    \node[trapezium,draw=corporate-blue,fill=corporate-lightblue!30,minimum width=6cm,minimum height=1cm,below of=aware] (interest) {Interest: Free Courses, Webinars, Assessments};
+    \node[trapezium,draw=corporate-blue,fill=corporate-lightblue!30,minimum width=4cm,minimum height=1cm,below of=interest] (convert) {Conversion: Free Trial, Onboarding};
+    \node[trapezium,draw=corporate-blue,fill=corporate-lightblue!30,minimum width=3cm,minimum height=1cm,below of=convert] (retain) {Retention: Success Coaching};
+    
+    % Metrics
+    \node[right of=aware,xshift=3cm] {\textbf{100K monthly visitors}};
+    \node[right of=interest,xshift=2.5cm] {\textbf{15\% sign-up rate}};
+    \node[right of=convert,xshift=2cm] {\textbf{20\% trial conversion}};
+    \node[right of=retain,xshift=1.5cm] {\textbf{95\% retention}};
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\begin{frame}{Competitive Advantage}
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Feature} & \textbf{Us} & \textbf{Competitor A} & \textbf{Competitor B} \\
+\midrule
+AI Personalisation & \checkmark & \texttimes & \texttimes \\
+Industry-Specific Content & \checkmark & \texttimes & \checkmark \\
+Career Coaching & \checkmark & \texttimes & \texttimes \\
+Outcome Guarantee & \checkmark & \texttimes & \texttimes \\
+Enterprise Solutions & \checkmark & \checkmark & \texttimes \\
+Price Point & \textbf{\pounds{79}} & \pounds{199} & \pounds{49} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{1em}
+\begin{block}{Unique Value Proposition}
+Only platform combining AI-powered personalisation with guaranteed career outcomes at an accessible price point
+\end{block}
+\end{frame}
+
+\section{Team}
+
+\begin{frame}{Leadership Team}
+\begin{columns}
+\column{0.33\textwidth}
+\begin{center}
+\includegraphics[width=0.6\textwidth]{ceo.png}\\
+\textbf{Jane Smith}\\
+CEO \& Co-founder\\
+\small{Ex-Google, Stanford MBA\\15 years EdTech}
+\end{center}
+
+\column{0.33\textwidth}
+\begin{center}
+\includegraphics[width=0.6\textwidth]{cto.png}\\
+\textbf{David Kumar}\\
+CTO \& Co-founder\\
+\small{Ex-Amazon, MIT CS\\AI/ML Expert}
+\end{center}
+
+\column{0.33\textwidth}
+\begin{center}
+\includegraphics[width=0.6\textwidth]{cmo.png}\\
+\textbf{Lisa Johnson}\\
+CMO\\
+\small{Ex-LinkedIn\\Growth Marketing}
+\end{center}
+\end{columns}
+
+\vspace{1em}
+\begin{block}{Advisory Board}
+\begin{itemize}
+    \item Prof. Michael Brown - Oxford University, Learning Sciences
+    \item Sarah Davis - Former CEO, Major EdTech Company
+    \item Tom Wilson - Partner, Leading VC Firm
+\end{itemize}
+\end{block}
+\end{frame}
+
+\section{Financial Projections}
+
+\begin{frame}{Revenue Projections}
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[
+        width=0.9\textwidth,
+        height=0.65\textheight,
+        xlabel={Year},
+        ylabel={Revenue (\pounds millions)},
+        legend pos=north west,
+        ymin=0,
+        ymax=30,
+        grid=major,
+        grid style={dashed,gray!30},
+        xtick={1,2,3,4,5},
+        xticklabels={2024,2025,2026,2027,2028}
+    ]
+    \addplot[color=corporate-blue,mark=square*,thick] coordinates {
+        (1,1.2) (2,4.5) (3,12) (4,22) (5,28)
+    };
+    \addlegendentry{Revenue}
+    
+    \addplot[color=accent-green,mark=*,thick] coordinates {
+        (1,0.3) (2,1.8) (3,6) (4,13.2) (5,19.6)
+    };
+    \addlegendentry{Gross Profit}
+    
+    \addplot[color=accent-orange,mark=triangle*,thick] coordinates {
+        (1,-0.8) (2,0.2) (3,2.4) (4,6.6) (5,11.2)
+    };
+    \addlegendentry{EBITDA}
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{center}
+\textbf{Path to profitability: Q2 2025 | Break-even: Month 18}
+\end{center}
+\end{frame}
+
+\begin{frame}{Use of Funds}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{center}
+\begin{tikzpicture}
+    \pie[
+        text=legend,
+        radius=3cm,
+        color={corporate-blue,corporate-lightblue,accent-green,accent-orange,corporate-grey}
+    ]{
+        40/Product Development,
+        30/Sales \& Marketing,
+        15/Team Expansion,
+        10/Operations,
+        5/Working Capital
+    }
+\end{tikzpicture}
+\end{center}
+
+\column{0.5\textwidth}
+\begin{block}{Investment Allocation}
+\begin{itemize}
+    \item \textbf{\pounds{2M}} - Product \& AI development
+    \item \textbf{\pounds{1.5M}} - Customer acquisition
+    \item \textbf{\pounds{750K}} - Key hires (20 people)
+    \item \textbf{\pounds{500K}} - Infrastructure
+    \item \textbf{\pounds{250K}} - Working capital
+\end{itemize}
+\end{block}
+\end{columns}
+\end{frame}
+
+\section{Investment Terms}
+
+\begin{frame}{Investment Summary}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{block}{The Deal}
+\begin{itemize}
+    \item \textbf{Amount}: \pounds{5M}
+    \item \textbf{Valuation}: \pounds{25M} pre-money
+    \item \textbf{Type}: Series A Preferred
+    \item \textbf{Board Seats}: 1 investor seat
+    \item \textbf{Use}: Growth \& expansion
+\end{itemize}
+\end{block}
+
+\column{0.5\textwidth}
+\begin{block}{Expected Returns}
+\begin{itemize}
+    \item 3x return in 3 years
+    \item 5x return in 5 years
+    \item Exit via acquisition or IPO
+    \item Strong acquisition interest already
+\end{itemize}
+\end{block}
+\end{columns}
+
+\vspace{1em}
+\begin{center}
+\begin{tikzpicture}
+    \node[rectangle,draw=accent-green,fill=accent-green!20,line width=3pt,minimum width=10cm,minimum height=1.5cm,align=center] {
+        \Large\textbf{Join us in revolutionising professional education}
+    };
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\begin{frame}{Contact Information}
+\begin{center}
+\Large\textbf{Thank you for your time}\\[1em]
+
+\normalsize
+\textbf{Jane Smith}\\
+CEO \& Co-founder\\[0.5em]
+jane.smith@techventure.com\\
++44 20 1234 5678\\[1em]
+
+\textbf{Investment Contact}\\
+David Kumar, CTO\\
+david.kumar@techventure.com\\[1em]
+
+\textbf{Website}: www.techventure.com\\
+\textbf{Investor Portal}: investors.techventure.com
+\end{center}
+\end{frame}
+
+\end{document}

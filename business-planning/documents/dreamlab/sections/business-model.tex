@@ -1,0 +1,224 @@
+\section{Business Model \& Revenue Streams}
+
+\subsection{Dual Revenue Model Overview}
+
+DreamLab's innovative business model leverages complementary revenue streams that maximise facility utilisation:
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+    % Central hub
+    \node[circle, draw=dreamlab-purple, fill=dreamlab-lightgrey, minimum size=3cm, align=center] (hub) at (0,0) {
+        \textbf{DreamLab}\\
+        \textbf{Revenue Hub}
+    };
+    
+    % Training revenue
+    \node[rectangle, draw=dreamlab-blue, fill=dreamlab-blue!20, minimum width=4cm, minimum height=2cm, align=center] (training) at (-5,2) {
+        \textbf{AI Training}\\
+        Mon-Fri Focus\\
+        70\% of revenue
+    };
+    
+    % Letting revenue
+    \node[rectangle, draw=dreamlab-green, fill=dreamlab-green!20, minimum width=4cm, minimum height=2cm, align=center] (letting) at (5,2) {
+        \textbf{Holiday Letting}\\
+        Weekends/Holidays\\
+        20\% of revenue
+    };
+    
+    % Consultancy revenue
+    \node[rectangle, draw=dreamlab-orange, fill=dreamlab-orange!20, minimum width=4cm, minimum height=2cm, align=center] (consult) at (-5,-2) {
+        \textbf{Consultancy}\\
+        Project-based\\
+        10\% of revenue
+    };
+    
+    % Online revenue
+    \node[rectangle, draw=dreamlab-grey, fill=dreamlab-grey!20, minimum width=4cm, minimum height=2cm, align=center] (online) at (5,-2) {
+        \textbf{Online/Hybrid}\\
+        Scalable growth\\
+        Future expansion
+    };
+    
+    % Connections
+    \draw[thick, ->] (training) -- (hub);
+    \draw[thick, ->] (letting) -- (hub);
+    \draw[thick, ->] (consult) -- (hub);
+    \draw[thick, ->] (online) -- (hub);
+\end{tikzpicture}
+\end{center}
+
+\subsection{Revenue Stream Analysis}
+
+\subsubsection{Training Revenue (Primary)}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{lrrrrr}
+\toprule
+\textbf{Training Type} & \textbf{Price/Person} & \textbf{Capacity} & \textbf{Frequency} & \textbf{Annual Sessions} & \textbf{Revenue} \\
+\midrule
+3-Day Bootcamp & \pounds{1,495} & 12 & Weekly & 40 & \pounds{718,000} \\
+2-Day Workshop & \pounds{995} & 12 & Bi-weekly & 20 & \pounds{238,000} \\
+5-Day Intensive & \pounds{2,995} & 10 & Monthly & 10 & \pounds{299,000} \\
+Corporate Package & \pounds{25,000} & Team & Monthly & 12 & \pounds{300,000} \\
+\midrule
+\multicolumn{5}{r}{\textbf{Total Training Revenue (Year 3):}} & \textbf{\pounds{1,555,000}} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Holiday Let Revenue (Secondary)}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Season} & \textbf{Nightly Rate} & \textbf{Occupancy} & \textbf{Available Nights} & \textbf{Revenue} \\
+\midrule
+Peak (Jul-Aug) & \pounds{350} & 90\% & 60 & \pounds{18,900} \\
+High (Apr-Jun, Sep-Oct) & \pounds{250} & 75\% & 120 & \pounds{22,500} \\
+Low (Nov-Mar) & \pounds{175} & 40\% & 100 & \pounds{7,000} \\
+\midrule
+\multicolumn{4}{r}{\textbf{Total Annual Letting Revenue:}} & \textbf{\pounds{48,400}} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Customer Acquisition Strategy}
+
+\subsubsection{B2B Sales Process}
+
+\begin{enumerate}
+    \item \textbf{Lead Generation}
+    \begin{itemize}
+        \item LinkedIn outreach to L\&D managers
+        \item Tech Wales network events
+        \item Webinar series on AI adoption
+        \item Partnership referrals
+    \end{itemize}
+    
+    \item \textbf{Sales Funnel}
+    \begin{itemize}
+        \item Initial consultation (free)
+        \item Facility tour (virtual/in-person)
+        \item Customised proposal
+        \item Pilot programme option
+        \item Contract negotiation
+    \end{itemize}
+    
+    \item \textbf{Account Management}
+    \begin{itemize}
+        \item Dedicated account manager
+        \item Quarterly business reviews
+        \item Continuous curriculum updates
+        \item Alumni network access
+    \end{itemize}
+\end{enumerate}
+
+\subsubsection{B2C Marketing Channels}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{lXrr}
+\toprule
+\textbf{Channel} & \textbf{Strategy} & \textbf{Budget} & \textbf{Expected ROI} \\
+\midrule
+Google Ads & Targeted keywords: "AI training UK" & \pounds{2,000}/mo & 3.5x \\
+LinkedIn Ads & Professional targeting & \pounds{1,500}/mo & 4.2x \\
+Content Marketing & Blog, tutorials, case studies & \pounds{1,000}/mo & 5.8x \\
+Email Marketing & Nurture campaigns & \pounds{500}/mo & 8.3x \\
+Airbnb/Booking & Holiday let promotion & 15\% commission & 6.5x \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Pricing Strategy}
+
+\subsubsection{Value-Based Pricing Model}
+
+Our pricing reflects the unique value proposition:
+
+\begin{keypoint}
+\textbf{Premium Positioning Justified By:}
+\begin{itemize}
+    \item Exclusive access to DGX A100 system (£150k equipment)
+    \item Small class sizes (max 12) ensuring individual attention
+    \item Accommodation included reducing total trip cost
+    \item Industry expert instructors with practical experience
+    \item Post-training support and alumni network
+\end{itemize}
+\end{keypoint}
+
+\subsubsection{Dynamic Pricing Elements}
+
+\begin{itemize}
+    \item \textbf{Early Bird Discounts}: 15\% off for bookings 2+ months ahead
+    \item \textbf{Group Rates}: 20\% discount for 5+ participants
+    \item \textbf{Alumni Pricing}: 25\% off returning students
+    \item \textbf{Off-Peak Rates}: 30\% reduction for November-February training
+    \item \textbf{Welsh Business Discount}: 10\% for local companies
+\end{itemize}
+
+\subsection{Customer Retention Strategy}
+
+\begin{center}
+\begin{tikzpicture}[node distance=2.5cm]
+    \node[rectangle, draw=dreamlab-purple, fill=dreamlab-purple!20, align=center] (acquire) {
+        \textbf{Acquire}\\
+        First training\\
+        experience
+    };
+    
+    \node[rectangle, draw=dreamlab-blue, fill=dreamlab-blue!20, align=center, right=of acquire] (engage) {
+        \textbf{Engage}\\
+        Alumni network\\
+        Continuous learning
+    };
+    
+    \node[rectangle, draw=dreamlab-green, fill=dreamlab-green!20, align=center, right=of engage] (expand) {
+        \textbf{Expand}\\
+        Advanced courses\\
+        Team training
+    };
+    
+    \node[rectangle, draw=dreamlab-orange, fill=dreamlab-orange!20, align=center, below=of engage] (advocate) {
+        \textbf{Advocate}\\
+        Referrals\\
+        Case studies
+    };
+    
+    \draw[thick, ->] (acquire) -- (engage);
+    \draw[thick, ->] (engage) -- (expand);
+    \draw[thick, ->] (expand) -- (advocate);
+    \draw[thick, ->] (advocate) -- (acquire);
+\end{tikzpicture}
+\end{center}
+
+\subsection{Partnership Revenue Model}
+
+Strategic partnerships provide additional revenue streams:
+
+\begin{itemize}
+    \item \textbf{University Partnerships}: \pounds{50,000}/year for student programmes
+    \item \textbf{Vendor Certifications}: 20\% commission on certification exams
+    \item \textbf{Corporate Memberships}: \pounds{25,000}/year for unlimited access
+    \item \textbf{Government Contracts}: Welsh Gov skills programmes
+\end{itemize}
+
+\subsection{Unit Economics}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lrr}
+\toprule
+\textbf{Metric} & \textbf{Training} & \textbf{Holiday Let} \\
+\midrule
+Average Transaction Value & \pounds{1,745} & \pounds{185}/night \\
+Customer Acquisition Cost & \pounds{215} & \pounds{45} \\
+Gross Margin & 68\% & 82\% \\
+Customer Lifetime Value & \pounds{8,500} & \pounds{1,200} \\
+Payback Period & 1.2 months & 0.8 months \\
+\bottomrule
+\end{tabular}
+\end{table}

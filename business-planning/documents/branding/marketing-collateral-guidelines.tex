@@ -1,0 +1,749 @@
+\documentclass[a4paper,11pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[british]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usepackage{fontawesome5}
+\usepackage{listings}
+\usepackage{multicol}
+
+% Define DreamLab colours
+\definecolor{dreamlabprimary}{RGB}{102, 51, 153}
+\definecolor{dreamlabsecondary}{RGB}{255, 87, 34}
+\definecolor{dreamlabaccent}{RGB}{0, 188, 212}
+\definecolor{dreamlabdark}{RGB}{33, 33, 33}
+\definecolor{dreamlablight}{RGB}{245, 245, 245}
+
+% Page setup
+\geometry{top=3cm, bottom=3cm, left=2.5cm, right=2.5cm}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textcolor{dreamlabprimary}{\textbf{DreamLab Marketing Collateral Guidelines}}}
+\fancyhead[R]{\textcolor{dreamlabdark}{Page \thepage\ of \pageref{LastPage}}}
+\fancyfoot[C]{\textcolor{dreamlabdark}{\small\textit{Confidential and Proprietary}}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+% Custom box style
+\tcbset{
+    dreambox/.style={
+        colback=dreamlablight,
+        colframe=dreamlabprimary,
+        fonttitle=\bfseries,
+        boxrule=2pt,
+        arc=5mm,
+        breakable
+    },
+    templatebox/.style={
+        colback=dreamlabaccent!10,
+        colframe=dreamlabaccent,
+        fonttitle=\bfseries,
+        boxrule=1.5pt,
+        arc=3mm
+    }
+}
+
+\title{
+    \vspace{-2cm}
+    \textcolor{dreamlabprimary}{\Huge\bfseries DreamLab}\\[0.5cm]
+    \textcolor{dreamlabdark}{\Large Marketing Collateral Guidelines}\\[0.3cm]
+    \textcolor{dreamlabsecondary}{\large Templates and Standards for Brand Excellence}
+}
+\author{\textcolor{dreamlabdark}{Brand and Marketing Team}}
+\date{\textcolor{dreamlabdark}{\today}}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\vspace{2cm}
+
+\begin{tcolorbox}[dreambox, title=Purpose]
+This document provides comprehensive guidelines and templates for creating consistent, professional marketing collateral that reinforces DreamLab's brand identity and effectively communicates our value proposition across all touchpoints.
+\end{tcolorbox}
+
+\tableofcontents
+\newpage
+
+\chapter{Overview and Principles}
+
+\section{Purpose of Marketing Collateral}
+
+Marketing collateral serves as the tangible representation of the DreamLab brand, enabling consistent communication across all client touchpoints. Each piece should:
+
+\begin{itemize}
+    \item Reinforce our position as the integrated creative technology leader
+    \item Demonstrate our ``mesh fluency'' across AI, immersive, and creative
+    \item Build trust through professional presentation
+    \item Drive specific actions (enquiry, meeting, partnership)
+    \item Reflect our values of accessibility and innovation
+\end{itemize}
+
+\section{Core Design Principles}
+
+\begin{tcolorbox}[dreambox, title=The Five Pillars of DreamLab Design]
+\begin{enumerate}
+    \item \textbf{Clarity First}: Complex technology made simple and accessible
+    \item \textbf{Visual Hierarchy}: Guide the eye to key messages and CTAs
+    \item \textbf{Brand Consistency}: Every element reinforces our identity
+    \item \textbf{White Space}: Let designs breathe for premium feel
+    \item \textbf{Purpose-Driven}: Every piece has a clear objective
+\end{enumerate}
+\end{tcolorbox}
+
+\chapter{Digital Collateral Templates}
+
+\section{Email Signatures}
+
+\subsection{Standard Email Signature}
+
+\begin{tcolorbox}[templatebox, title=Primary Email Signature Template]
+\begin{verbatim}
+[Name] | [Job Title]
+DreamLab | Where Innovation Meets Accessibility
+
+📧 [email]@dreamlab.agency
+📱 +44 [number]
+🌐 dreamlab.agency
+
+MediaCityUK, Salford Quays, Manchester M50 2EQ
+
+[LinkedIn icon] [Twitter icon] [Instagram icon]
+
+This email is confidential and may be legally privileged.
+\end{verbatim}
+\end{tcolorbox}
+
+\subsection{Campaign Email Signature}
+
+\begin{tcolorbox}[templatebox, title=Campaign Signature Addition]
+\begin{verbatim}
+---
+🚀 Join us at Digital City Festival - July 2025
+Book your free AI readiness assessment: dreamlab.agency/assessment
+\end{verbatim}
+\end{tcolorbox}
+
+\section{Social Media Templates}
+
+\subsection{LinkedIn Post Structure}
+
+\begin{tcolorbox}[dreambox, title=LinkedIn Post Formula]
+\textbf{Hook} (First line - make it count)\\
+↓\\
+\textbf{Problem/Insight} (2-3 lines establishing relevance)\\
+↓\\
+\textbf{Solution/Perspective} (3-4 lines of value)\\
+↓\\
+\textbf{Proof/Example} (Specific case or data)\\
+↓\\
+\textbf{CTA} (Clear next step)\\
+↓\\
+\textbf{Hashtags} (3-5 relevant tags)
+\end{tcolorbox}
+
+\subsection{Content Pillars for Social}
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{X|X|X}
+\toprule
+\textbf{Pillar} & \textbf{Content Types} & \textbf{Frequency} \\
+\midrule
+Thought Leadership & Industry insights, predictions & 2x/week \\
+Client Success & Case studies, testimonials & 1x/week \\
+Behind the Scenes & Team culture, process & 1x/week \\
+Educational & How-tos, tips, guides & 2x/week \\
+News \& Updates & Company news, events & As needed \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Presentation Templates}
+
+\subsection{PowerPoint/Keynote Structure}
+
+\begin{tcolorbox}[dreambox, title=Standard Deck Structure]
+\begin{enumerate}
+    \item \textbf{Title Slide}: Company name, presentation title, date
+    \item \textbf{Agenda}: Clear navigation for the deck
+    \item \textbf{Challenge}: Problem we're solving
+    \item \textbf{Solution}: Our approach and capabilities
+    \item \textbf{Proof}: Case studies and results
+    \item \textbf{Process}: How we work
+    \item \textbf{Team}: Key people involved
+    \item \textbf{Commercials}: Pricing and timelines
+    \item \textbf{Next Steps}: Clear CTA
+    \item \textbf{Contact}: All contact details
+\end{enumerate}
+\end{tcolorbox}
+
+\subsection{Slide Design Guidelines}
+
+\begin{itemize}
+    \item Maximum 6 bullet points per slide
+    \item Minimum 24pt font for body text
+    \item 30\% text, 70\% visuals ratio
+    \item Consistent header placement
+    \item Footer with page numbers and confidentiality notice
+\end{itemize}
+
+\chapter{Print Collateral Templates}
+
+\section{Business Cards}
+
+\subsection{Standard Business Card Layout}
+
+\begin{tcolorbox}[templatebox, title=Business Card Specifications]
+\textbf{Dimensions}: 85mm x 55mm (UK standard)\\
+\textbf{Orientation}: Horizontal\\
+\textbf{Paper}: 400gsm silk with spot UV on logo\\
+
+\textbf{Front}:
+\begin{itemize}
+    \item DreamLab logo (top left)
+    \item Name and title (centred)
+    \item Tagline (bottom)
+\end{itemize}
+
+\textbf{Back}:
+\begin{itemize}
+    \item Contact details (left aligned)
+    \item QR code to personal booking page (right)
+    \item Mesh pattern background (10\% opacity)
+\end{itemize}
+\end{tcolorbox}
+
+\section{Brochures and One-Pagers}
+
+\subsection{Service One-Pager Template}
+
+\begin{tcolorbox}[dreambox, title=One-Pager Structure]
+\textbf{Header} (20\% of page):
+\begin{itemize}
+    \item Service name and icon
+    \item Compelling headline
+    \item One-sentence value prop
+\end{itemize}
+
+\textbf{Body} (60\% of page):
+\begin{multicols}{2}
+\begin{itemize}
+    \item Challenge addressed
+    \item Solution overview
+    \item Key features (3-5)
+    \item Benefits (3-5)
+    \item Success metric
+    \item Mini case study
+\end{itemize}
+\end{multicols}
+
+\textbf{Footer} (20\% of page):
+\begin{itemize}
+    \item Pricing starting from
+    \item Clear CTA
+    \item Contact details
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Capability Brochure Structure}
+
+\begin{enumerate}
+    \item \textbf{Cover}: Hero image, logo, tagline
+    \item \textbf{Inside Cover}: Executive summary
+    \item \textbf{Pages 2-3}: Company overview spread
+    \item \textbf{Pages 4-9}: Service sections (2 pages each)
+    \item \textbf{Pages 10-11}: Case studies
+    \item \textbf{Page 12}: Team and credentials
+    \item \textbf{Back Cover}: Contact and CTA
+\end{enumerate}
+
+\section{Event Materials}
+
+\subsection{Pop-up Banner Design}
+
+\begin{tcolorbox}[templatebox, title=Banner Specifications]
+\textbf{Size}: 850mm x 2000mm\\
+\textbf{Safe Zone}: 50mm from all edges\\
+\textbf{Resolution}: 150 DPI minimum\\
+
+\textbf{Content Hierarchy}:
+\begin{enumerate}
+    \item Logo (top 15\%)
+    \item Headline (eye level - 30\%)
+    \item 3 key benefits (middle 30\%)
+    \item CTA and contact (bottom 25\%)
+\end{enumerate}
+\end{tcolorbox}
+
+\subsection{Exhibition Stand Graphics}
+
+Key elements for trade show presence:
+\begin{itemize}
+    \item Large format mesh pattern backdrop
+    \item Interactive demo stations with branded screens
+    \item Literature holders with service one-pagers
+    \item Branded giveaways (see merchandise section)
+    \item Staff uniforms with consistent branding
+\end{itemize}
+
+\chapter{Digital Asset Guidelines}
+
+\section{Website Assets}
+
+\subsection{Hero Banners}
+
+\begin{tcolorbox}[dreambox, title=Hero Banner Specifications]
+\textbf{Dimensions}: 1920x1080px (desktop), 768x1024px (tablet), 375x667px (mobile)\\
+\textbf{File Format}: WebP with JPG fallback\\
+\textbf{File Size}: <200KB optimised\\
+
+\textbf{Content Requirements}:
+\begin{itemize}
+    \item Compelling headline (8-12 words)
+    \item Supporting subhead (15-20 words)
+    \item Primary CTA button
+    \item Secondary CTA link (optional)
+    \item Background image or animation
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Case Study Format}
+
+\begin{tcolorbox}[templatebox, title=Case Study Structure]
+\begin{enumerate}
+    \item \textbf{Hero Section}: Client logo, industry, headline result
+    \item \textbf{Challenge}: 2-3 paragraphs on problem
+    \item \textbf{Solution}: Our approach with visuals
+    \item \textbf{Implementation}: Timeline and process
+    \item \textbf{Results}: Quantified outcomes
+    \item \textbf{Testimonial}: Client quote with photo
+    \item \textbf{Technical Details}: For those interested
+    \item \textbf{Related Services}: Cross-sell opportunities
+\end{enumerate}
+\end{tcolorbox}
+
+\section{Video Content Templates}
+
+\subsection{Video Intro/Outro}
+
+\begin{itemize}
+    \item \textbf{Intro} (5 seconds): Logo animation with mesh particles forming
+    \item \textbf{Lower Third}: Name, title, company on branded bar
+    \item \textbf{Outro} (10 seconds): CTA, contact details, social handles
+    \item \textbf{Music}: Licensed track matching brand energy
+\end{itemize}
+
+\subsection{Demo Video Structure}
+
+\begin{tcolorbox}[dreambox, title=Demo Video Framework]
+\textbf{Total Length}: 2-3 minutes maximum
+
+\begin{enumerate}
+    \item Hook (0-10s): Problem statement
+    \item Introduction (10-30s): Solution overview
+    \item Demo (30s-2m): Show, don't tell
+    \item Results (2m-2m30s): Impact metrics
+    \item CTA (2m30s-3m): Next steps
+\end{enumerate}
+\end{tcolorbox}
+
+\chapter{Content Guidelines}
+
+\section{Writing Style}
+
+\subsection{Voice and Tone}
+
+\begin{tcolorbox}[dreambox, title=DreamLab Writing Principles]
+\begin{itemize}
+    \item \textbf{Accessible}: Technical concepts explained simply
+    \item \textbf{Confident}: We know our stuff, but stay humble
+    \item \textbf{Action-Oriented}: Focus on outcomes and benefits
+    \item \textbf{Inclusive}: Avoid jargon, welcome all readers
+    \item \textbf{Optimistic}: Positive about possibilities
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Grammar and Style Rules}
+
+\begin{itemize}
+    \item UK English spelling throughout
+    \item Oxford comma usage is optional but be consistent
+    \item Sentence case for headlines (not Title Case)
+    \item Active voice preferred
+    \item Present tense for capabilities
+    \item Numbers: Spell out one to nine, use digits for 10+
+    \item Percentages: Always use digits (5\% not five percent)
+\end{itemize}
+
+\section{Messaging Framework}
+
+\subsection{Value Proposition Variations}
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{X|X}
+\toprule
+\textbf{Audience} & \textbf{Key Message} \\
+\midrule
+SME Owners & ``Enterprise technology at prices that make sense'' \\
+Tech Startups & ``Scale faster with integrated creative tech'' \\
+Public Sector & ``Innovation that delivers social value'' \\
+Investors & ``The future of integrated agency services'' \\
+Partners & ``Collaboration that amplifies capabilities'' \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Proof Points}
+
+Always support claims with evidence:
+\begin{itemize}
+    \item Quantified results (percentage improvements)
+    \item Client testimonials (with attribution)
+    \item Industry recognition (awards, certifications)
+    \item Partnership credentials (university, government)
+    \item Team expertise (years experience, past work)
+\end{itemize}
+
+\chapter{Campaign Materials}
+
+\section{Launch Campaign Assets}
+
+\subsection{``Make the Impossible Accessible'' Campaign}
+
+\begin{tcolorbox}[dreambox, title=Campaign Asset Checklist]
+\textbf{Digital Assets}:
+\begin{itemize}
+    \item Hero video (60s, 30s, 15s versions)
+    \item Static social posts (5 variations per platform)
+    \item Animated GIFs for email
+    \item Display ad sets (10 sizes)
+    \item Landing page template
+\end{itemize}
+
+\textbf{Print Assets}:
+\begin{itemize}
+    \item A4 flyer design
+    \item Poster series (A3, A2, A1)
+    \item Print ads (full page, half page)
+    \item Direct mail piece
+\end{itemize}
+
+\textbf{Event Assets}:
+\begin{itemize}
+    \item Presentation deck
+    \item Handout materials
+    \item Merchandise designs
+    \item Photo booth props
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Seasonal Campaigns}
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{l|X|X}
+\toprule
+\textbf{Season} & \textbf{Theme} & \textbf{Key Assets} \\
+\midrule
+Q1 & New Year Transformation & Goal-setting templates, assessment tools \\
+Q2 & Innovation Spring & Festival materials, launch content \\
+Q3 & Summer of Growth & Case studies, success stories \\
+Q4 & Future-Proof Your Business & Planning guides, trend reports \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Lead Generation Materials}
+
+\subsection{Downloadable Resources}
+
+\begin{tcolorbox}[templatebox, title=Lead Magnet Templates]
+\textbf{Whitepaper Structure}:
+\begin{enumerate}
+    \item Executive summary (1 page)
+    \item Industry challenge (2-3 pages)
+    \item Research/insights (3-4 pages)
+    \item Solution framework (2-3 pages)
+    \item Case studies (2 pages)
+    \item Conclusion and CTA (1 page)
+\end{enumerate}
+
+\textbf{Design Elements}:
+\begin{itemize}
+    \item Branded cover page
+    \item Chapter dividers with mesh pattern
+    \item Pull quotes highlighting key insights
+    \item Infographics for data visualisation
+    \item Footer with page numbers and copyright
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Assessment Tools}
+
+Create interactive assessments for:
+\begin{itemize}
+    \item AI Readiness Score
+    \item Digital Maturity Assessment
+    \item Innovation Potential Calculator
+    \item ROI Estimator
+    \item Technology Stack Audit
+\end{itemize}
+
+Each should include:
+\begin{itemize}
+    \item 10-15 questions maximum
+    \item Instant results display
+    \item Personalised recommendations
+    \item Follow-up email sequence
+    \item Booking link for consultation
+\end{itemize}
+
+\chapter{Merchandise and Giveaways}
+
+\section{Branded Merchandise}
+
+\subsection{Tier 1: Mass Giveaways}
+
+\begin{itemize}
+    \item \textbf{Pens}: Soft-touch finish in brand purple
+    \item \textbf{Notebooks}: A5 with mesh pattern cover
+    \item \textbf{Stickers}: Die-cut logo and tagline variations
+    \item \textbf{Tote bags}: Recycled material with subtle branding
+    \item \textbf{Phone grips}: With AR trigger for demo
+\end{itemize}
+
+\subsection{Tier 2: Client Gifts}
+
+\begin{itemize}
+    \item \textbf{Power banks}: Wireless charging with LED logo
+    \item \textbf{Bluetooth speakers}: Minimalist design
+    \item \textbf{Coffee travel mugs}: Temperature-controlled
+    \item \textbf{Desk plants}: In branded planters
+    \item \textbf{Experience vouchers}: Local partnerships
+\end{itemize}
+
+\subsection{Tier 3: Premium Gifts}
+
+\begin{itemize}
+    \item \textbf{VR headsets}: Branded Meta Quest
+    \item \textbf{Smart home devices}: With custom skills
+    \item \textbf{Limited edition artwork}: Commissioned pieces
+    \item \textbf{Workshop passes}: Exclusive training
+    \item \textbf{Innovation lab tours}: VIP experiences
+\end{itemize}
+
+\section{Packaging Guidelines}
+
+\begin{tcolorbox}[dreambox, title=Packaging Principles]
+All DreamLab packaging should:
+\begin{itemize}
+    \item Use sustainable materials where possible
+    \item Include unboxing moment design
+    \item Feature QR codes for digital experiences
+    \item Maintain premium feel without excess
+    \item Include personal note template
+\end{itemize}
+\end{tcolorbox}
+
+\chapter{Quality Control}
+
+\section{Approval Process}
+
+\subsection{Approval Matrix}
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{X|X|X}
+\toprule
+\textbf{Asset Type} & \textbf{Approver} & \textbf{Review Time} \\
+\midrule
+Social media posts & Marketing Manager & Same day \\
+Email campaigns & Marketing Director & 24 hours \\
+Print materials & Creative Director + CMO & 48 hours \\
+Video content & Full leadership team & 72 hours \\
+Website updates & Digital Manager + CTO & 24 hours \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Quality Checklist}
+
+Before any material is published:
+\begin{itemize}
+    \item \faCheckSquare\ Brand colours correct (use colour picker)
+    \item \faCheckSquare\ Typography matches guidelines
+    \item \faCheckSquare\ Logo usage compliant
+    \item \faCheckSquare\ Messaging on-brand
+    \item \faCheckSquare\ Legal disclaimers included
+    \item \faCheckSquare\ Contact details accurate
+    \item \faCheckSquare\ Links tested and tracked
+    \item \faCheckSquare\ Accessibility standards met
+\end{itemize}
+
+\section{Version Control}
+
+\subsection{File Naming Convention}
+
+\begin{tcolorbox}[templatebox, title=Standard File Naming]
+\texttt{[Type]\_[Project]\_[Version]\_[Date]\_[Status]}
+
+Examples:
+\begin{itemize}
+    \item \texttt{Brochure\_Capabilities\_v3\_2025-07-15\_FINAL}
+    \item \texttt{Banner\_DigitalCity\_v1\_2025-06-20\_DRAFT}
+    \item \texttt{Email\_Newsletter\_v2\_2025-08-01\_APPROVED}
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Asset Management}
+
+All marketing assets stored in:
+\begin{itemize}
+    \item \textbf{Working Files}: Internal shared drive
+    \item \textbf{Approved Assets}: Brand portal
+    \item \textbf{Archive}: Yearly folders for past campaigns
+    \item \textbf{Templates}: Always latest versions only
+\end{itemize}
+
+\chapter{Measurement and Optimisation}
+
+\section{Performance Metrics}
+
+\subsection{Collateral Effectiveness KPIs}
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{X|X|X}
+\toprule
+\textbf{Asset Type} & \textbf{Primary Metric} & \textbf{Target} \\
+\midrule
+Email signatures & Click-through rate & 2\%+ \\
+Social posts & Engagement rate & 3\%+ \\
+Landing pages & Conversion rate & 10\%+ \\
+Brochures & Download-to-lead rate & 20\%+ \\
+Case studies & Time on page & 3+ minutes \\
+Videos & Completion rate & 70\%+ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{A/B Testing Framework}
+
+Regular testing schedule:
+\begin{itemize}
+    \item \textbf{Weekly}: Email subject lines and CTAs
+    \item \textbf{Bi-weekly}: Social media post formats
+    \item \textbf{Monthly}: Landing page variations
+    \item \textbf{Quarterly}: Messaging and value props
+\end{itemize}
+
+\section{Continuous Improvement}
+
+\begin{tcolorbox}[dreambox, title=Optimisation Cycle]
+\begin{enumerate}
+    \item \textbf{Deploy}: Launch with tracking in place
+    \item \textbf{Measure}: Collect data for 30 days minimum
+    \item \textbf{Analyse}: Identify performance patterns
+    \item \textbf{Optimise}: Make data-driven improvements
+    \item \textbf{Document}: Update templates with learnings
+    \item \textbf{Share}: Communicate best practices team-wide
+\end{enumerate}
+\end{tcolorbox}
+
+\appendix
+
+\chapter{Quick Reference Guides}
+
+\section{Brand Colour Codes}
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\textwidth}{X|c|c|c|c}
+\toprule
+\textbf{Colour} & \textbf{Hex} & \textbf{RGB} & \textbf{CMYK} & \textbf{Pantone} \\
+\midrule
+Primary Purple & \#6633CC & 102,51,153 & 60,80,0,0 & 2665 C \\
+Secondary Orange & \#FF5722 & 255,87,34 & 0,75,90,0 & 171 C \\
+Accent Cyan & \#00BCD4 & 0,188,212 & 70,0,10,0 & 3115 C \\
+Dark Grey & \#212121 & 33,33,33 & 0,0,0,95 & Black 7 C \\
+Light Grey & \#F5F5F5 & 245,245,245 & 0,0,0,5 & Cool Gray 1 C \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Typography Quick Guide}
+
+\begin{itemize}
+    \item \textbf{Headlines}: Montserrat Bold, -20 tracking
+    \item \textbf{Subheads}: Montserrat Medium, 0 tracking
+    \item \textbf{Body}: Inter Regular, +10 tracking, 1.5 line height
+    \item \textbf{Captions}: Inter Light, 90\% size
+    \item \textbf{CTAs}: Montserrat Bold, all caps, +50 tracking
+\end{itemize}
+
+\section{Common Mistakes to Avoid}
+
+\begin{enumerate}
+    \item Using RGB colours in print materials
+    \item Stretching or distorting the logo
+    \item Mixing fonts within same hierarchy level
+    \item Overcrowding designs - embrace white space
+    \item Forgetting mobile optimisation
+    \item Ignoring accessibility contrast ratios
+    \item Using outdated statistics or case studies
+    \item Creating materials without clear CTAs
+\end{enumerate}
+
+\chapter{Templates Download Links}
+
+\section{Digital Templates}
+
+\begin{tcolorbox}[templatebox, title=Available for Download]
+Access all templates at: \texttt{brand.dreamlab.agency/templates}
+
+\begin{itemize}
+    \item PowerPoint master template
+    \item Keynote master template
+    \item Email signature HTML files
+    \item Social media post templates (Canva)
+    \item Video intro/outro After Effects files
+    \item Landing page HTML/CSS templates
+\end{itemize}
+\end{tcolorbox}
+
+\section{Print Templates}
+
+\begin{itemize}
+    \item Business card InDesign files
+    \item Brochure templates (8, 12, 16 pages)
+    \item One-pager Word and InDesign versions
+    \item Poster templates (all sizes)
+    \item Stationery suite files
+\end{itemize}
+
+\section{Brand Asset Library}
+
+Complete library includes:
+\begin{itemize}
+    \item Logo files (all formats and variations)
+    \item Icon sets (SVG and PNG)
+    \item Pattern library
+    \item Stock photography collection
+    \item Approved illustrations
+    \item Motion graphics elements
+\end{itemize}
+
+\end{document}

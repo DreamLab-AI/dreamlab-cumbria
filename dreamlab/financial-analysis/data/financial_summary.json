@@ -1,0 +1,135 @@
+{
+  "investment_summary": {
+    "total_capital_required": 126000,
+    "hardware_solar": 28500,
+    "property_conversion": 76000,
+    "business_setup": 21500,
+    "r_and_d_credit_recovery": 12555,
+    "net_investment": 113445
+  },
+  "revenue_projections": {
+    "year_1": {
+      "training": 108000,
+      "holiday_let": 42000,
+      "gpu_rental": 10416,
+      "total": 160416,
+      "net_profit": 87000,
+      "margin_percent": 54
+    },
+    "year_2": {
+      "training": 162000,
+      "holiday_let": 52000,
+      "gpu_rental": 9828,
+      "total": 223828,
+      "net_profit": 128000,
+      "margin_percent": 57
+    },
+    "year_3": {
+      "training": 243000,
+      "holiday_let": 58000,
+      "gpu_rental": 8920,
+      "total": 309920,
+      "net_profit": 184000,
+      "margin_percent": 59
+    },
+    "year_4": {
+      "training": 324000,
+      "holiday_let": 62000,
+      "gpu_rental": 7711,
+      "total": 393711,
+      "net_profit": 237000,
+      "margin_percent": 60
+    },
+    "year_5": {
+      "training": 405000,
+      "holiday_let": 65000,
+      "gpu_rental": 6300,
+      "total": 476300,
+      "net_profit": 290000,
+      "margin_percent": 61
+    }
+  },
+  "financial_metrics": {
+    "base_case": {
+      "npv": 623847,
+      "irr_percent": 68.5,
+      "payback_years": 2.3,
+      "roi_5_year_percent": 412,
+      "total_5_year_profit": 926000
+    },
+    "conservative_case": {
+      "npv": 342156,
+      "irr_percent": 42.3,
+      "payback_years": 3.1,
+      "roi_5_year_percent": 285,
+      "total_5_year_profit": 648000
+    },
+    "optimistic_case": {
+      "npv": 1124538,
+      "irr_percent": 94.7,
+      "payback_years": 1.8,
+      "roi_5_year_percent": 638,
+      "total_5_year_profit": 1389000
+    }
+  },
+  "solar_roi": {
+    "system_cost": 22000,
+    "annual_savings_year_1": 4394,
+    "payback_years": 5.8,
+    "npv_25_year": 52340,
+    "irr_percent": 17.8,
+    "carbon_saved_tonnes": 135
+  },
+  "tax_optimization": {
+    "sole_trader_5_year_tax": 325500,
+    "ltd_company_5_year_tax": 278250,
+    "hybrid_5_year_tax": 268750,
+    "hybrid_savings": 56750,
+    "recommended_structure": "hybrid",
+    "optimal_salary": 12570,
+    "effective_tax_rate_percent": 22
+  },
+  "training_details": {
+    "price_per_delegate_per_day": 1500,
+    "days_per_course": 3,
+    "delegates_per_course": 3,
+    "revenue_per_course": 13500,
+    "course_schedule": {
+      "year_1": 8,
+      "year_2": 12,
+      "year_3": 18,
+      "year_4": 24,
+      "year_5": 30
+    }
+  },
+  "holiday_let_details": {
+    "peak_rate": 250,
+    "mid_rate": 180,
+    "low_rate": 120,
+    "occupancy_rates": {
+      "peak": 0.85,
+      "mid": 0.65,
+      "low": 0.45
+    },
+    "platform_commission": 0.15
+  },
+  "sensitivity_analysis": {
+    "training_price_impact": {
+      "minus_20_percent": -180000,
+      "minus_10_percent": -95000,
+      "plus_10_percent": 95000,
+      "plus_20_percent": 180000
+    },
+    "occupancy_impact": {
+      "minus_20_percent": -90000,
+      "minus_10_percent": -45000,
+      "plus_10_percent": 45000,
+      "plus_20_percent": 90000
+    }
+  },
+  "break_even_analysis": {
+    "minimum_training_courses_per_year": 4,
+    "minimum_holiday_occupancy_percent": 40,
+    "combined_capacity_percent": 40
+  }
+}
