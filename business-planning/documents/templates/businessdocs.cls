@@ -18,6 +18,7 @@
 \RequirePackage{tikz}
 \RequirePackage{pgfplots}
 \RequirePackage{pgfgantt}
+\RequirePackage{pgf-pie}
 \RequirePackage{hyperref}
 \RequirePackage{tocloft}
 \RequirePackage{titlesec}
@@ -43,6 +44,7 @@
 \RequirePackage{listings}
 \RequirePackage{tcolorbox}
 \RequirePackage{mdframed}
+\RequirePackage{tabularx}
 
 % TikZ libraries
 \usetikzlibrary{shapes,arrows,positioning,calc,patterns,decorations.pathreplacing,shadows,backgrounds}

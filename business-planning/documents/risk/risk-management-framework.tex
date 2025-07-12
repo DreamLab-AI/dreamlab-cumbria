@@ -37,20 +37,20 @@ Our approach to risk management is based on the following principles:
 \begin{tikzpicture}[node distance=2cm]
     % Board level
     \node[rectangle,draw=corporate-blue,fill=corporate-lightblue!30,minimum width=12cm,minimum height=1.5cm] (board) {Board of Directors - Ultimate Risk Oversight};
-    
+
     % Executive level
     \node[rectangle,draw=corporate-blue,fill=corporate-lightblue!30,minimum width=6cm,minimum height=1.5cm,below of=board,xshift=-3cm] (exec) {Executive Committee};
     \node[rectangle,draw=corporate-blue,fill=corporate-lightblue!30,minimum width=6cm,minimum height=1.5cm,below of=board,xshift=3cm] (audit) {Audit Committee};
-    
+
     % Risk committee
     \node[rectangle,draw=accent-orange,fill=accent-orange!20,minimum width=10cm,minimum height=1.5cm,below of=board,yshift=-3cm] (riskcom) {Risk Management Committee};
-    
+
     % Operational level
     \node[rectangle,draw=corporate-grey,fill=corporate-lightgrey,minimum width=3cm,minimum height=1.2cm,below of=riskcom,xshift=-4cm,yshift=-1cm] (tech) {Technology};
     \node[rectangle,draw=corporate-grey,fill=corporate-lightgrey,minimum width=3cm,minimum height=1.2cm,below of=riskcom,xshift=-1.3cm,yshift=-1cm] (ops) {Operations};
     \node[rectangle,draw=corporate-grey,fill=corporate-lightgrey,minimum width=3cm,minimum height=1.2cm,below of=riskcom,xshift=1.3cm,yshift=-1cm] (finance) {Finance};
     \node[rectangle,draw=corporate-grey,fill=corporate-lightgrey,minimum width=3cm,minimum height=1.2cm,below of=riskcom,xshift=4cm,yshift=-1cm] (market) {Marketing};
-    
+
     % Connections
     \draw[->,thick] (board) -- (exec);
     \draw[->,thick] (board) -- (audit);
@@ -75,40 +75,40 @@ We use a 5x5 risk matrix to assess and prioritise risks based on likelihood and 
 \begin{tikzpicture}
     % Grid
     \draw[thick] (0,0) grid (5,5);
-    
+
     % Colour coding
     \fill[accent-green!30] (0,0) rectangle (2,2);
     \fill[accent-orange!30] (2,0) rectangle (5,2);
     \fill[accent-orange!30] (0,2) rectangle (2,5);
     \fill[accent-red!30] (2,2) rectangle (5,5);
-    
+
     % Labels
     \node at (-0.5,2.5) [rotate=90] {\textbf{Likelihood}};
     \node at (2.5,-0.5) {\textbf{Impact}};
-    
+
     % Scale labels
     \node at (-0.5,0.5) {\small 1};
     \node at (-0.5,1.5) {\small 2};
     \node at (-0.5,2.5) {\small 3};
     \node at (-0.5,3.5) {\small 4};
     \node at (-0.5,4.5) {\small 5};
-    
+
     \node at (0.5,-0.5) {\small 1};
     \node at (1.5,-0.5) {\small 2};
     \node at (2.5,-0.5) {\small 3};
     \node at (3.5,-0.5) {\small 4};
     \node at (4.5,-0.5) {\small 5};
-    
+
     % Legend
     \node[rectangle,fill=accent-green!30,minimum width=1cm,minimum height=0.5cm] at (7,4) {};
     \node[right] at (7.5,4) {\small Low Risk (1-4)};
-    
+
     \node[rectangle,fill=accent-orange!30,minimum width=1cm,minimum height=0.5cm] at (7,3) {};
     \node[right] at (7.5,3) {\small Medium Risk (5-12)};
-    
+
     \node[rectangle,fill=accent-red!30,minimum width=1cm,minimum height=0.5cm] at (7,2) {};
     \node[right] at (7.5,2) {\small High Risk (15-25)};
-    
+
     % Risk score formula
     \node at (2.5,-2) {\textbf{Risk Score = Likelihood × Impact}};
 \end{tikzpicture}
@@ -167,13 +167,13 @@ REP-001 & Negative media coverage & Reputational & 3 & 3 & 9 & PR strategy, cris
 \begin{tikzpicture}
     % Grid
     \draw[thick] (0,0) grid (5,5);
-    
+
     % Colour coding
     \fill[accent-green!30] (0,0) rectangle (2,2);
     \fill[accent-orange!30] (2,0) rectangle (5,2);
     \fill[accent-orange!30] (0,2) rectangle (2,5);
     \fill[accent-red!30] (2,2) rectangle (5,5);
-    
+
     % Plot risks
     \node[circle,fill=corporate-blue,minimum size=8mm] at (2.5,4.5) {\tiny FIN-001};
     \node[circle,fill=corporate-blue,minimum size=8mm] at (2.5,4.5) {\tiny TEC-001};
@@ -185,7 +185,7 @@ REP-001 & Negative media coverage & Reputational & 3 & 3 & 9 & PR strategy, cris
     \node[circle,fill=corporate-blue,minimum size=8mm] at (1.5,4.5) {\tiny COM-001};
     \node[circle,fill=corporate-blue,minimum size=8mm] at (1.5,3.5) {\tiny OPS-002};
     \node[circle,fill=corporate-blue,minimum size=8mm] at (2.5,2.5) {\tiny REP-001};
-    
+
     % Axes
     \node at (-0.5,2.5) [rotate=90] {\textbf{Likelihood}};
     \node at (2.5,-0.5) {\textbf{Impact}};
@@ -224,26 +224,26 @@ REP-001 & Negative media coverage & Reputational & 3 & 3 & 9 & PR strategy, cris
 \toprule
 \textbf{Risk Area} & \textbf{Mitigation Approach} \\
 \midrule
-Funding dependency & \begin{tabular}[t]{@{}l@{}}
-• Maintain 12-month cash runway\\
-• Develop revenue-based financing options\\
-• Build relationships with 20+ investors\\
-• Achieve cash flow positive by Month 18
-\end{tabular} \\
+Funding dependency & \begin{minipage}[t]{0.6\textwidth}\begin{itemize}[leftmargin=*,noitemsep,label=\textbullet]
+    \item Maintain 12-month cash runway
+    \item Develop revenue-based financing options
+    \item Build relationships with 20+ investors
+    \item Achieve cash flow positive by Month 18
+\end{itemize}\end{minipage} \\
 \midrule
-CAC management & \begin{tabular}[t]{@{}l@{}}
-• Diversify acquisition channels\\
-• Invest in organic/content marketing\\
-• Implement referral programme\\
-• Target CAC:CLV ratio of 1:4
-\end{tabular} \\
+CAC management & \begin{minipage}[t]{0.6\textwidth}\begin{itemize}[leftmargin=*,noitemsep,label=\textbullet]
+    \item Diversify acquisition channels
+    \item Invest in organic/content marketing
+    \item Implement referral programme
+    \item Target CAC:CLV ratio of 1:4
+\end{itemize}\end{minipage} \\
 \midrule
-Currency exposure & \begin{tabular}[t]{@{}l@{}}
-• Natural hedging through costs\\
-• Forward contracts for major exposures\\
-• Multi-currency pricing strategy\\
-• Regular FX risk assessment
-\end{tabular} \\
+Currency exposure & \begin{minipage}[t]{0.6\textwidth}\begin{itemize}[leftmargin=*,noitemsep,label=\textbullet]
+    \item Natural hedging through costs
+    \item Forward contracts for major exposures
+    \item Multi-currency pricing strategy
+    \item Regular FX risk assessment
+\end{itemize}\end{minipage} \\
 \bottomrule
 \end{tabular}
 \caption{Financial risk mitigation strategies}
@@ -256,19 +256,19 @@ Currency exposure & \begin{tabular}[t]{@{}l@{}}
 \begin{tikzpicture}[node distance=2.5cm]
     % Central security
     \node[circle,draw=accent-green,fill=accent-green!20,minimum size=3cm,align=center] (center) {\textbf{Security}\\Core};
-    
+
     % Security layers
-    \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,above of=center] (prevent) {Prevention\\WAF, DDoS Protection};
-    \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,right of=center] (detect) {Detection\\SIEM, Monitoring};
-    \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,below of=center] (respond) {Response\\Incident Team};
-    \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,left of=center] (recover) {Recovery\\Backups, DR};
-    
+    \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,align=center,above of=center] (prevent) {Prevention\\WAF, DDoS Protection};
+    \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,align=center,right of=center] (detect) {Detection\\SIEM, Monitoring};
+    \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,align=center,below of=center] (respond) {Response\\Incident Team};
+    \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,align=center,left of=center] (recover) {Recovery\\Backups, DR};
+
     % Connections
     \draw[->,thick] (center) -- (prevent);
     \draw[->,thick] (center) -- (detect);
     \draw[->,thick] (center) -- (respond);
     \draw[->,thick] (center) -- (recover);
-    
+
     % Cycle arrows
     \draw[->,thick,dashed] (prevent) to[bend left=30] (detect);
     \draw[->,thick,dashed] (detect) to[bend left=30] (respond);
@@ -307,37 +307,42 @@ Compliance & Audit findings & 0 & 1-3 & >3 \\
 \centering
 \begin{tikzpicture}
     % Overall risk status
-    \node[rectangle,draw=corporate-blue,fill=corporate-lightblue!30,minimum width=12cm,minimum height=2cm] at (0,5) {
-        \Large\textbf{Overall Risk Status: MEDIUM}\\
-        \small Last Updated: \today
-    };
-    
+    \node[rectangle,draw=corporate-blue,fill=corporate-lightblue!30,minimum width=12cm,minimum height=2cm,align=center] at (0,5) {
+            \Large\textbf{Overall Risk Status: MEDIUM}\\
+            \small Last Updated: \today
+        };
+
     % Risk category status boxes
-    \node[rectangle,draw=accent-green,fill=accent-green!20,minimum width=3.5cm,minimum height=2cm] at (-4,2) {
-        \textbf{Strategic}\\
-        \small 2 High, 3 Medium\\
-        Trend: Stable
-    };
-    
-    \node[rectangle,draw=accent-orange,fill=accent-orange!20,minimum width=3.5cm,minimum height=2cm] at (0,2) {
-        \textbf{Financial}\\
-        \small 1 High, 4 Medium\\
-        Trend: Improving
-    };
-    
-    \node[rectangle,draw=accent-red,fill=accent-red!20,minimum width=3.5cm,minimum height=2cm] at (4,2) {
-        \textbf{Technology}\\
-        \small 2 High, 2 Medium\\
-        Trend: Worsening
-    };
-    
+    \node[rectangle,draw=accent-green,fill=accent-green!20,minimum width=3.5cm,minimum height=2cm,align=center] at (-4,2) {
+            \textbf{Strategic}\\
+            \small 2 High, 3 Medium\\
+            Trend: Stable
+        };
+
+    \node[rectangle,draw=accent-orange,fill=accent-orange!20,minimum width=3.5cm,minimum height=2cm,align=center] at (0,2) {
+            \textbf{Financial}\\
+            \small 1 High, 4 Medium\\
+            Trend: Improving
+        };
+
+    \node[rectangle,draw=accent-red,fill=accent-red!20,minimum width=3.5cm,minimum height=2cm,align=center] at (4,2) {
+            \textbf{Technology}\\
+            \small 2 High, 2 Medium\\
+            Trend: Worsening
+        };
+
     % Action items
-    \node[rectangle,draw=corporate-grey,fill=corporate-lightgrey,minimum width=10cm,minimum height=2cm] at (0,-1) {
-        \textbf{Critical Actions Required}\\
-        \small • Complete Series A funding by Q2\\
-        \small • Implement enhanced security measures\\
-        \small • Finalise key hire succession plans
-    };
+    \node[rectangle,draw=corporate-grey,fill=corporate-lightgrey,minimum width=10cm,minimum height=2cm,align=center] at (0,-1) {
+            \textbf{Critical Actions Required}\\
+            \small
+            \begin{minipage}[t]{0.8\textwidth}
+            \begin{itemize}[leftmargin=*,noitemsep,label=\textbullet]
+                \item Complete Series A funding by Q2
+                \item Implement enhanced security measures
+                \item Finalise key hire succession plans
+            \end{itemize}
+            \end{minipage}
+        };
 \end{tikzpicture}
 \caption{Executive risk dashboard template}
 \end{figure}
@@ -352,33 +357,33 @@ Compliance & Audit findings & 0 & 1-3 & >3 \\
 \toprule
 \textbf{Phase} & \textbf{Actions} \\
 \midrule
-Detection (0-1 hour) & \begin{itemize}
+Detection (0-1 hour) & \begin{minipage}[t]{10cm}\begin{itemize}[leftmargin=*,noitemsep,label=\textbullet]
     \item Incident identification and initial assessment
     \item Activate crisis management team
     \item Implement immediate containment measures
     \item Begin documentation of events
-\end{itemize} \\
+\end{itemize}\end{minipage} \\
 \midrule
-Assessment (1-4 hours) & \begin{itemize}
+Assessment (1-4 hours) & \begin{minipage}[t]{10cm}\begin{itemize}[leftmargin=*,noitemsep,label=\textbullet]
     \item Full impact assessment
     \item Stakeholder identification
     \item Resource mobilisation
     \item Initial communications draft
-\end{itemize} \\
+\end{itemize}\end{minipage} \\
 \midrule
-Response (4-24 hours) & \begin{itemize}
+Response (4-24 hours) & \begin{minipage}[t]{10cm}\begin{itemize}[leftmargin=*,noitemsep,label=\textbullet]
     \item Execute response plan
     \item Stakeholder communications
     \item Media management
     \item Continuous monitoring
-\end{itemize} \\
+\end{itemize}\end{minipage} \\
 \midrule
-Recovery (1-7 days) & \begin{itemize}
+Recovery (1-7 days) & \begin{minipage}[t]{10cm}\begin{itemize}[leftmargin=*,noitemsep,label=\textbullet]
     \item Restore normal operations
     \item Follow-up communications
     \item Lessons learned documentation
     \item Process improvements
-\end{itemize} \\
+\end{itemize}\end{minipage} \\
 \bottomrule
 \end{tabular}
 \caption{Crisis response phases}
@@ -391,7 +396,7 @@ Recovery (1-7 days) & \begin{itemize}
 \begin{tikzpicture}[node distance=2cm]
     % Crisis team
     \node[circle,draw=accent-red,fill=accent-red!20,minimum size=2.5cm,align=center] (crisis) {\textbf{Crisis}\\Team};
-    
+
     % Stakeholders
     \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,above left of=crisis,xshift=-1cm] (board) {Board};
     \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,above right of=crisis,xshift=1cm] (investors) {Investors};
@@ -399,7 +404,7 @@ Recovery (1-7 days) & \begin{itemize}
     \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,below right of=crisis,xshift=1cm] (employees) {Employees};
     \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,below left of=crisis,xshift=-1cm] (media) {Media};
     \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,left of=crisis,xshift=-1cm] (regulators) {Regulators};
-    
+
     % Communication lines
     \draw[<->,thick,accent-red] (crisis) -- (board);
     \draw[<->,thick,accent-red] (crisis) -- (investors);
@@ -477,7 +482,7 @@ Each scenario has detailed response plans including:
         (1,45) (2,65) (3,78) (4,85) (5,90) (6,92) (7,95) (8,98)
     };
     \addlegendentry{All Staff}
-    
+
     \addplot[color=accent-green,mark=square*,thick] coordinates {
         (1,60) (2,80) (3,90) (4,95) (5,98) (6,100) (7,100) (8,100)
     };
