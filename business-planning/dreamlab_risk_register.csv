@@ -1,0 +1,15 @@
+Risk ID,Category,Risk Description,Probability (1-3),Impact (1-4),Risk Score,Risk Level,Owner,Mitigation Strategy,Contingency Plan,Status,Review Date
+R001,Financial,Cash Flow Management - Complex flows across entities,3,3,9,CRITICAL,CFO/Stephen,"13-week forecast, payment plans, overdraft facility","Emergency credit line, asset lending",Active,Monthly
+R002,Business Model,Revenue Concentration - Only 12-20 delegates needed,3,3,9,CRITICAL,Sales Director,"Diversify: virtual options, workshops, partnerships","Pivot to lower-price programs",Active,Monthly
+R003,Property,LDNP Planning Permission - Strict development controls,2,4,8,HIGH,Project Manager,"Pre-app consultation, specialist planner, phased approach","Remote operation, partner venue",Active,Weekly until resolved
+R004,Financial,High Capital Investment - £125-136k upfront,2,4,8,HIGH,CFO/Stephen,"Phased investment, multiple funding sources, pre-sales","Scale back scope, lease equipment",Active,Monthly
+R005,Property,Construction/Fit-out - Delays and overruns,2,3,6,MEDIUM,Project Manager,"Fixed-price contracts, staged payments, 15% contingency","Phased fit-out, temporary venue",Pending,Bi-weekly during build
+R006,Business Model,Technology Obsolescence - Rapid AI evolution,2,3,6,MEDIUM,CTO/Tech Lead,"Quarterly updates, advisory board, modular design","Focus on principles over tools",Active,Quarterly
+R007,Business Model,Seasonality - Lake District tourism patterns,3,2,6,MEDIUM,Operations Manager,"Contra-seasonal pricing, virtual winter options","Corporate off-peak focus",Active,Quarterly
+R008,Operational,Family/Business Boundaries - Work-life balance,3,2,6,MEDIUM,Stephen & Sara,"Physical separation, protocols, support systems","External venue backup",Active,Monthly
+R009,Business Model,Dual Entity Structure - Legal/tax complexity,2,2,4,MEDIUM,CFO/Accountant,"Professional advice, clear agreements, quarterly reviews","Consolidate to single entity",Active,Quarterly
+R010,Financial,R&D Tax Credit Recovery - £51k uncertainty,2,2,4,MEDIUM,CFO/Tax Advisor,"Specialist advisor, robust documentation","Alternative innovation funding",Pending,Bi-annually
+R011,Operational,Training Quality/Reputation - High expectations,1,4,4,MEDIUM,Training Director,"QA framework, feedback loops, service recovery","Money-back guarantee",Active,After each cohort
+R012,Property,Technology Installation - AV integration,1,3,3,LOW,Tech Manager,"Established integrator, warranties, redundancy","Backup equipment ready",Pending,During installation
+R013,Operational,Equipment Insurance - Liability coverage,1,3,3,LOW,Operations Manager,"Comprehensive package, security systems","Risk reduction measures",Active,Annually
+R014,Property,Solar Pergola - Planning compliance,2,1,2,LOW,Project Manager,"Design integration, pre-approved installers","Roof-mounted alternative",Pending,With main planning

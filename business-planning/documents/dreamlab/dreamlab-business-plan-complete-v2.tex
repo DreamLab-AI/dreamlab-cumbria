@@ -1,0 +1,165 @@
+\documentclass[12pt,a4paper]{dreamlab-business}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgf-pie}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{pgfplots}
+\usepackage{pgfgantt}
+
+% Define DreamLab colors
+\definecolor{dreamlab-purple}{RGB}{88,44,131}
+\definecolor{dreamlab-blue}{RGB}{0,119,200}
+\definecolor{dreamlab-green}{RGB}{0,166,81}
+\definecolor{dreamlab-orange}{RGB}{245,130,32}
+\definecolor{dreamlab-grey}{RGB}{128,128,128}
+\definecolor{dreamlab-lightgrey}{RGB}{240,240,240}
+\definecolor{dreamlab-lightblue}{RGB}{0,119,200}
+
+% Custom commands
+\newcommand{\dualrevenuekpi}[4]{%
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \textbf{#1}\\[0.5em]
+        Training: #2\\
+        Letting: #3\\[0.5em]
+        \textcolor{dreamlab-purple}{\textbf{#4}}
+    \end{minipage}%
+}
+
+% Custom environments
+\newenvironment{keypoint}{%
+    \begin{tcolorbox}[colback=dreamlab-lightgrey,colframe=dreamlab-purple,arc=2mm]
+}{%
+    \end{tcolorbox}
+}
+
+\newenvironment{trainingpackage}{%
+    \begin{tcolorbox}[colback=dreamlab-lightblue!10,colframe=dreamlab-blue,arc=2mm]
+}{%
+    \end{tcolorbox}
+}
+
+\newenvironment{lettinginfo}{%
+    \begin{tcolorbox}[colback=dreamlab-green!10,colframe=dreamlab-green,arc=2mm]
+}{%
+    \end{tcolorbox}
+}
+
+\newenvironment{solarroi}{%
+    \begin{tcolorbox}[colback=dreamlab-orange!10,colframe=dreamlab-orange,arc=2mm]
+}{%
+    \end{tcolorbox}
+}
+
+\newenvironment{labspec}{%
+    \begin{tabular}{p{5cm}p{6cm}rr}
+    \toprule
+    \textbf{Equipment} & \textbf{Specification} & \textbf{Qty} & \textbf{Cost} \\
+    \midrule
+}{%
+    \bottomrule
+    \end{tabular}
+}
+
+\newenvironment{executivesummary}{%
+    \section*{Executive Summary}
+    \addcontentsline{toc}{section}{Executive Summary}
+}{%
+}
+
+\newenvironment{phasedtimeline}{%
+    \begin{ganttchart}[
+        hgrid,
+        vgrid,
+        x unit=1.2cm,
+        y unit title=0.7cm,
+        y unit chart=0.6cm,
+        title label font=\small,
+        bar label font=\small,
+        group label font=\small\bfseries,
+        milestone label font=\small\itshape
+    ]{1}{12}
+}{%
+    \end{ganttchart}
+}
+
+% Document metadata
+\title{DreamLab AI Ltd\\Business Plan \& Investment Proposal\\Version 2.0}
+\author{Executive Team\\DreamLab AI Ltd}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+DreamLab AI Ltd is pioneering the future of technology training at the intersection of creative industries, agentic engineering, and advanced simulation. This comprehensive business plan outlines our strategy to become the UK's premier residential training facility, targeting a £6.5M revenue by Year 5 through innovative programs in virtual production, autonomous agent systems, engineering visualization, and emerging technologies.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+% Include all sections
+\input{sections/executive-summary-final}
+\newpage
+
+\input{sections/company-overview}
+\newpage
+
+\section{Market Analysis}
+\input{../market-analysis-creative-tech}
+\newpage
+
+\input{sections/service-offerings-updated}
+\newpage
+
+\input{sections/agentic-engineering-services}
+\newpage
+
+\input{sections/facility-description-updated}
+\newpage
+
+\input{sections/business-model}
+\newpage
+
+\input{sections/financial-projections-updated}
+\newpage
+
+\input{sections/marketing-strategy}
+\newpage
+
+\input{sections/operations-plan}
+\newpage
+
+\input{sections/risk-analysis-updated}
+\newpage
+
+\input{sections/implementation-timeline-updated}
+\newpage
+
+\section{Appendices}
+\subsection{Appendix A: Equipment Specifications}
+\input{sections/appendix-equipment}
+
+\subsection{Appendix B: Training Package Details}
+\input{sections/appendix-training-packages}
+
+\subsection{Appendix C: Financial Models}
+\input{sections/appendix-financial-models}
+
+\subsection{Appendix D: Brand Guidelines}
+\input{../brand-messaging-guide}
+
+\subsection{Appendix E: Website Migration Plan}
+\input{../website-migration-plan}
+
+\end{document}

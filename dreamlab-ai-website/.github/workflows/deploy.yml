@@ -1,0 +1,90 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v3
+        # persist-credentials defaults to true, so we can drop the override.
+
+      - name: Use Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Create .env file
+        run: |
+          echo "VITE_SUPABASE_URL=${{ secrets.VITE_SUPABASE_URL }}" > .env
+          echo "VITE_SUPABASE_ANON_KEY=${{ secrets.VITE_SUPABASE_ANON_KEY }}" >> .env
+
+      - name: Prepare team data
+        run: |
+          mkdir -p public/data/team
+          if [ -d "src/data/team" ]; then
+            cp -rv src/data/team/* public/data/team/
+            echo "Copied team data from src to public"
+            ls -la public/data/team/
+          fi
+
+      - name: Build
+        run: npm run build
+
+      - name: Copy CNAME file
+        run: |
+          if [ -f "CNAME" ]; then
+            cp CNAME dist/CNAME
+            echo "✅ CNAME copied to dist"
+          else
+            echo "❌ CNAME not found in root directory"
+          fi
+
+      - name: Copy 404.html
+        run: |
+          if [ -f "public/404.html" ]; then
+            cp public/404.html dist/404.html
+            echo "✅ 404.html copied to dist"
+          else
+            echo "❌ 404.html not found in public directory"
+          fi
+
+      - name: Copy team data to dist
+        run: |
+          mkdir -p dist/data/team
+          cp -rv public/data/team/* dist/data/team/ || echo "No team data to copy"
+
+      - name: Verify build artifacts
+        run: |
+          echo "Contents of dist/data/team:"
+          ls -la dist/data/team/ || echo "dist/data/team directory not found!"
+          if [ -f "dist/data/team/06.md" ]; then
+            echo "✅ 06.md exists in build output"
+          else
+            echo "❌ 06.md missing from build output"
+          fi
+          if [ -f "dist/data/team/06.png" ]; then
+            echo "✅ 06.png exists in build output"
+          else
+            echo "❌ 06.png missing from build output"
+          fi
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          force_orphan: true
+          commit_message: "Deploy from GitHub Actions"

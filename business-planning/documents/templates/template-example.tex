@@ -51,7 +51,7 @@ Opportunities are presented in green-accented boxes, providing visual distinctio
 The template includes commands for properly formatting financial figures:
 
 \begin{itemize}
-    \item Revenue target: \pounds{2500000}
+    \item Revenue target: \poundsval{2500000}
     \item European expansion: \euros{1800000}
     \item US market opportunity: \dollars{3200000}
 \end{itemize}
@@ -77,7 +77,7 @@ The template includes commands for properly formatting financial figures:
     \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,minimum width=2.5cm,minimum height=1.5cm,right of=start] (plan) {Planning};
     \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,minimum width=2.5cm,minimum height=1.5cm,right of=plan] (exec) {Execution};
     \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,minimum width=2.5cm,minimum height=1.5cm,right of=exec] (close) {Closure};
-    
+
     \draw[->,thick,corporate-blue] (start) -- (plan);
     \draw[->,thick,corporate-blue] (plan) -- (exec);
     \draw[->,thick,corporate-blue] (exec) -- (close);

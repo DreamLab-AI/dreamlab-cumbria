@@ -11,9 +11,9 @@ TEXFILES = $(wildcard */*.tex)
 PDFFILES = $(TEXFILES:.tex=.pdf)
 
 # Main targets
-.PHONY: all clean templates timeline pitch executive risk implementation bibliography test
+.PHONY: all clean templates timeline executive risk implementation bibliography test compendium
 
-all: templates timeline pitch executive risk implementation bibliography
+all: templates timeline executive risk implementation bibliography
 
 templates:
 	@echo "Building template documents..."
@@ -24,42 +24,51 @@ templates:
 
 timeline:
 	@echo "Building timeline document..."
-	cd timeline && $(LATEX) $(LATEXFLAGS) project-timeline.tex
-	cd timeline && $(LATEX) $(LATEXFLAGS) project-timeline.tex
+	cd timeline && TEXINPUTS=../templates:../dreamlab: $(LATEX) $(LATEXFLAGS) project-timeline.tex
+	cd timeline && TEXINPUTS=../templates:../dreamlab: $(LATEX) $(LATEXFLAGS) project-timeline.tex
 
-pitch:
-	@echo "Building pitch deck..."
-	cd pitch && $(LATEX) $(LATEXFLAGS) investor-pitch-deck.tex
-	cd pitch && $(LATEX) $(LATEXFLAGS) investor-pitch-deck.tex
 
 executive:
 	@echo "Building executive summary..."
-	cd executive && $(LATEX) $(LATEXFLAGS) executive-summary.tex
+	cd executive && TEXINPUTS=../templates:../dreamlab: $(LATEX) $(LATEXFLAGS) executive-summary.tex
 	cd executive && $(BIBER) executive-summary
-	cd executive && $(LATEX) $(LATEXFLAGS) executive-summary.tex
-	cd executive && $(LATEX) $(LATEXFLAGS) executive-summary.tex
+	cd executive && TEXINPUTS=../templates:../dreamlab: $(LATEX) $(LATEXFLAGS) executive-summary.tex
+	cd executive && TEXINPUTS=../templates:../dreamlab: $(LATEX) $(LATEXFLAGS) executive-summary.tex
 
 risk:
 	@echo "Building risk framework..."
-	cd risk && $(LATEX) $(LATEXFLAGS) risk-management-framework.tex
-	cd risk && $(LATEX) $(LATEXFLAGS) risk-management-framework.tex
+	cd risk && TEXINPUTS=../templates:../dreamlab: $(LATEX) $(LATEXFLAGS) risk-management-framework.tex
+	cd risk && TEXINPUTS=../templates:../dreamlab: $(LATEX) $(LATEXFLAGS) risk-management-framework.tex
 
 implementation:
 	@echo "Building implementation roadmap..."
-	cd implementation && $(LATEX) $(LATEXFLAGS) implementation-roadmap.tex
-	cd implementation && $(LATEX) $(LATEXFLAGS) implementation-roadmap.tex
+	cd implementation && TEXINPUTS=../templates:../dreamlab: $(LATEX) $(LATEXFLAGS) implementation-roadmap.tex
+	cd implementation && TEXINPUTS=../templates:../dreamlab: $(LATEX) $(LATEXFLAGS) implementation-roadmap.tex
 
 bibliography:
 	@echo "Building citation guide..."
-	cd bibliography && $(LATEX) $(LATEXFLAGS) citation-guide.tex
+	cd bibliography && TEXINPUTS=../templates:../dreamlab: $(LATEX) $(LATEXFLAGS) citation-guide.tex
 	cd bibliography && $(BIBER) citation-guide
-	cd bibliography && $(LATEX) $(LATEXFLAGS) citation-guide.tex
-	cd bibliography && $(LATEX) $(LATEXFLAGS) citation-guide.tex
+	cd bibliography && TEXINPUTS=../templates:../dreamlab: $(LATEX) $(LATEXFLAGS) citation-guide.tex
+	cd bibliography && TEXINPUTS=../templates:../dreamlab: $(LATEX) $(LATEXFLAGS) citation-guide.tex
 
 # Test compilation of a single document
 test:
 	@echo "Testing template compilation..."
 	cd templates && $(LATEX) $(LATEXFLAGS) template-example.tex
+
+# Create a single compendium PDF
+compendium: all
+	@echo "Creating compendium PDF..."
+	pdfunite \
+		templates/template-example.pdf \
+		timeline/project-timeline.pdf \
+		executive/executive-summary.pdf \
+		risk/risk-management-framework.pdf \
+		implementation/implementation-roadmap.pdf \
+		bibliography/citation-guide.pdf \
+		business-compendium.pdf
+	@echo "Compendium created: business-compendium.pdf"
 
 # Clean auxiliary files
 clean:
@@ -101,11 +110,11 @@ help:
 	@echo "  make all          - Build all documents"
 	@echo "  make templates    - Build template example"
 	@echo "  make timeline     - Build project timeline"
-	@echo "  make pitch        - Build investor pitch deck"
 	@echo "  make executive    - Build executive summary"
 	@echo "  make risk         - Build risk framework"
 	@echo "  make implementation - Build implementation roadmap"
 	@echo "  make bibliography - Build citation guide"
+	@echo "  make compendium   - Create a single PDF with all documents"
 	@echo "  make test         - Test compilation"
 	@echo "  make clean        - Remove auxiliary files"
 	@echo "  make cleanall     - Remove all generated files"

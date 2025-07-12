@@ -33,7 +33,7 @@
 \RequirePackage{amssymb}
 \RequirePackage{siunitx}
 \RequirePackage{eurosym}
-\RequirePackage{fontspec}
+\RequirePackage{lmodern}
 \RequirePackage{microtype}
 \RequirePackage[backend=biber,style=authoryear,citestyle=authoryear,natbib=true,sorting=nyt,maxbibnames=99]{biblatex}
 \RequirePackage{csquotes}
@@ -58,9 +58,9 @@
 \definecolor{accent-red}{RGB}{198,40,40}
 
 % Font configuration
-\setmainfont{TeX Gyre Termes}
-\setsansfont{TeX Gyre Heros}
-\setmonofont{TeX Gyre Cursor}
+% \setmainfont{Times New Roman}
+% \setsansfont{Arial}
+% \setmonofont{Courier New}
 
 % Page geometry
 \geometry{
@@ -124,7 +124,7 @@
     detect-weight=true,
     detect-family=true
 }
-\newcommand{\pounds}[1]{\pounds\num{#1}}
+\newcommand{\poundsval}[1]{\pounds\num{#1}}
 \newcommand{\euros}[1]{\euro\num{#1}}
 \newcommand{\dollars}[1]{\$\num{#1}}
 

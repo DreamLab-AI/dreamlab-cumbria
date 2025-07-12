@@ -1,0 +1,246 @@
+\section{Operations Plan}
+
+\subsection{Operational Structure}
+
+\subsubsection{Organizational Design}
+
+\begin{center}
+\begin{tikzpicture}[node distance=2cm]
+    % CEO level
+    \node[rectangle, draw=dreamlab-purple, fill=dreamlab-purple!20, minimum width=3cm, align=center] (ceo) {
+        \textbf{CEO}\\
+        Strategic Vision
+    };
+    
+    % C-suite level
+    \node[rectangle, draw=dreamlab-blue, fill=dreamlab-blue!20, minimum width=2.5cm, align=center, below left=1.5cm and 3cm of ceo] (cto) {
+        \textbf{CTO}\\
+        Pete Woodbridge
+    };
+    
+    \node[rectangle, draw=dreamlab-blue, fill=dreamlab-blue!20, minimum width=2.5cm, align=center, below left=1.5cm and 0.5cm of ceo] (cco) {
+        \textbf{CCO}\\
+        Ste Moyler
+    };
+    
+    \node[rectangle, draw=dreamlab-blue, fill=dreamlab-blue!20, minimum width=2.5cm, align=center, below right=1.5cm and 0.5cm of ceo] (coo) {
+        \textbf{COO}\\
+        Operations
+    };
+    
+    \node[rectangle, draw=dreamlab-blue, fill=dreamlab-blue!20, minimum width=2.5cm, align=center, below right=1.5cm and 3cm of ceo] (cfo) {
+        \textbf{CFO}\\
+        Finance
+    };
+    
+    % Department level
+    \node[rectangle, draw=dreamlab-green, fill=dreamlab-green!20, minimum width=2cm, align=center, below=of cto] (tech) {
+        Tech Team\\
+        (4 FTE)
+    };
+    
+    \node[rectangle, draw=dreamlab-green, fill=dreamlab-green!20, minimum width=2cm, align=center, below=of cco] (creative) {
+        Creative\\
+        (3 FTE)
+    };
+    
+    \node[rectangle, draw=dreamlab-green, fill=dreamlab-green!20, minimum width=2cm, align=center, below=of coo] (ops) {
+        Operations\\
+        (5 FTE)
+    };
+    
+    \node[rectangle, draw=dreamlab-green, fill=dreamlab-green!20, minimum width=2cm, align=center, below=of cfo] (finance) {
+        Finance\\
+        (2 FTE)
+    };
+    
+    % Connections
+    \draw[thick] (ceo) -- (cto);
+    \draw[thick] (ceo) -- (cco);
+    \draw[thick] (ceo) -- (coo);
+    \draw[thick] (ceo) -- (cfo);
+    \draw[thick] (cto) -- (tech);
+    \draw[thick] (cco) -- (creative);
+    \draw[thick] (coo) -- (ops);
+    \draw[thick] (cfo) -- (finance);
+\end{tikzpicture}
+\end{center}
+
+\subsection{Facility Operations}
+
+\subsubsection{Operating Schedule}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{lXX}
+\toprule
+\textbf{Period} & \textbf{Primary Use} & \textbf{Activities} \\
+\midrule
+Monday-Friday & Training Programs & Intensive courses, corporate training \\
+Weekends & Mixed Use & Short courses, equipment rental, maintenance \\
+Evenings & Online/Hybrid & Virtual sessions, international programs \\
+Holidays & Accommodation & Holiday lets, team retreats \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Capacity Management}
+
+\begin{itemize}
+    \item \textbf{Virtual Production Stage}: 1 primary booking + 2 observation groups daily
+    \item \textbf{Motion Capture Studio}: 2 sessions daily (AM/PM)
+    \item \textbf{Computer Labs}: 3 concurrent classes (36 total capacity)
+    \item \textbf{Accommodation}: 10 rooms (20 guests maximum)
+\end{itemize}
+
+\subsection{Quality Assurance}
+
+\subsubsection{Training Standards}
+
+\begin{keypoint}
+\textbf{Quality Framework}
+\begin{enumerate}
+    \item Pre-course skills assessment
+    \item Structured learning objectives
+    \item Hands-on project requirements
+    \item Continuous feedback loops
+    \item Post-course evaluation
+    \item 6-month follow-up survey
+\end{enumerate}
+\end{keypoint}
+
+\subsubsection{Instructor Standards}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+\textbf{Requirement} & \textbf{Minimum Standard} & \textbf{Preferred} \\
+\midrule
+Industry Experience & 5 years & 10+ years \\
+Teaching Experience & 2 years & 5+ years \\
+Project Portfolio & 5 major projects & 10+ including awards \\
+Certifications & Vendor certified & Multiple platforms \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Technology Operations}
+
+\subsubsection{Equipment Maintenance Schedule}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{lXrr}
+\toprule
+\textbf{Equipment} & \textbf{Maintenance Type} & \textbf{Frequency} & \textbf{Annual Cost} \\
+\midrule
+LED Volume & Calibration, pixel mapping & Monthly & \pounds{24,000} \\
+Motion Capture & Camera alignment, calibration & Weekly & \pounds{12,000} \\
+Computing Cluster & Software updates, cleaning & Monthly & \pounds{18,000} \\
+Networking & Security patches, optimization & Weekly & \pounds{6,000} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Data Management}
+
+\begin{itemize}
+    \item \textbf{Storage}: 500TB primary + 500TB backup
+    \item \textbf{Bandwidth}: 10Gbps dedicated fiber
+    \item \textbf{Security}: Zero-trust architecture, encrypted storage
+    \item \textbf{Backup}: Hourly snapshots, daily offsite, monthly archives
+\end{itemize}
+
+\subsection{Supply Chain Management}
+
+\subsubsection{Key Suppliers}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{lXl}
+\toprule
+\textbf{Category} & \textbf{Primary Suppliers} & \textbf{Backup Options} \\
+\midrule
+Hardware & NVIDIA, Disguise, Mo-Sys & AMD, Brompton, Ncam \\
+Software & Autodesk, Epic, Unity & Open source alternatives \\
+Catering & Local Welsh suppliers & Regional alternatives \\
+Utilities & Welsh Water, SSE & Generator backup \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Health, Safety \& Compliance}
+
+\subsubsection{Safety Protocols}
+
+\begin{enumerate}
+    \item Comprehensive induction for all students
+    \item Equipment safety training mandatory
+    \item Emergency procedures posted and practiced
+    \item First aid trained staff on all shifts
+    \item Regular safety audits and updates
+\end{enumerate}
+
+\subsubsection{Compliance Requirements}
+
+\begin{itemize}
+    \item \textbf{Education}: Ofsted registration (in progress)
+    \item \textbf{Data}: GDPR compliance, ICO registration
+    \item \textbf{Safety}: HSE standards, fire regulations
+    \item \textbf{Insurance}: Public liability, professional indemnity
+    \item \textbf{Accessibility}: Equality Act 2010 compliance
+\end{itemize}
+
+\subsection{Sustainability Operations}
+
+\begin{solarroi}
+\textbf{Sustainable Operating Practices}
+\begin{itemize}
+    \item 18kW solar array providing 60\% of energy needs
+    \item LED lighting throughout facility
+    \item Electric vehicle fleet for transfers
+    \item Locally sourced catering (80\% within 50 miles)
+    \item Paperless operations where possible
+    \item Carbon offset program for student travel
+\end{itemize}
+\end{solarroi}
+
+\subsection{Performance Metrics}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lrr}
+\toprule
+\textbf{Operational KPI} & \textbf{Target} & \textbf{Measurement} \\
+\midrule
+Facility Utilization & 75\% & Weekly average \\
+Equipment Uptime & 98\% & Monthly average \\
+Student Satisfaction & 90\%+ & Post-course survey \\
+Safety Incidents & <2/year & Annual total \\
+Energy Self-Sufficiency & 60\% & Annual average \\
+Cost per Student Day & <\pounds{150} & Quarterly review \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Continuous Improvement}
+
+\subsubsection{Feedback Loops}
+
+\begin{enumerate}
+    \item Daily instructor debriefs
+    \item Weekly operations meetings
+    \item Monthly advisory board input
+    \item Quarterly industry reviews
+    \item Annual strategic planning
+\end{enumerate}
+
+\subsubsection{Innovation Pipeline}
+
+\begin{itemize}
+    \item Technology refresh every 18-24 months
+    \item New course development quarterly
+    \item Partnership opportunities monthly review
+    \item Best practice benchmarking bi-annually
+\end{itemize}

@@ -44,7 +44,7 @@ The project spans 24 months, divided into four major phases:
     \gantttitle{Year 1}{12}
     \gantttitle{Year 2}{12} \\
     \gantttitlelist{1,...,24}{1} \\
-    
+
     % Foundation Phase
     \ganttgroup{Foundation Phase}{1}{6} \\
     \ganttbar{Business Planning}{1}{2} \\
@@ -53,7 +53,7 @@ The project spans 24 months, divided into four major phases:
     \ganttbar{Infrastructure}{3}{5} \\
     \ganttbar{Brand Development}{3}{6} \\
     \ganttmilestone{Foundation Complete}{6} \\
-    
+
     % Development Phase
     \ganttgroup{Development Phase}{7}{12} \\
     \ganttbar{Product Design}{7}{9} \\
@@ -62,7 +62,7 @@ The project spans 24 months, divided into four major phases:
     \ganttbar{Testing \& QA}{10}{12} \\
     \ganttbar{Pilot Programme}{11}{12} \\
     \ganttmilestone{MVP Launch}{12} \\
-    
+
     % Market Entry Phase
     \ganttgroup{Market Entry Phase}{13}{18} \\
     \ganttbar{Marketing Campaign}{13}{15} \\
@@ -71,7 +71,7 @@ The project spans 24 months, divided into four major phases:
     \ganttbar{Partnership Development}{14}{17} \\
     \ganttbar{Feedback Integration}{15}{18} \\
     \ganttmilestone{Market Established}{18} \\
-    
+
     % Scaling Phase
     \ganttgroup{Scaling Phase}{19}{24} \\
     \ganttbar{Geographic Expansion}{19}{22} \\
@@ -79,7 +79,7 @@ The project spans 24 months, divided into four major phases:
     \ganttbar{Team Scaling}{20}{23} \\
     \ganttbar{Series A Fundraising}{21}{23} \\
     \ganttmilestone{Scale Achieved}{24} \\
-    
+
     % Dependencies
     \ganttlink{elem1}{elem3}
     \ganttlink{elem2}{elem4}
@@ -123,7 +123,7 @@ Brand Development & 4 months & Marketing team & Brand identity, Guidelines \\
     \milestone{8}{0}{M5}
     \milestone{10}{0}{M6}
     \milestone{12}{0}{M7}
-    
+
     \node[below] at (0,-0.5) {\small Start};
     \node[below] at (2,-0.5) {\small Legal};
     \node[below] at (4,-0.5) {\small Team};
@@ -146,7 +146,7 @@ Brand Development & 4 months & Marketing team & Brand identity, Guidelines \\
 ]{7}{12}
     \gantttitle{Development Phase Detail}{6} \\
     \gantttitlelist{7,...,12}{1} \\
-    
+
     \ganttbar{Requirements Analysis}{7}{8} \\
     \ganttbar{System Architecture}{7}{8} \\
     \ganttbar{Database Design}{8}{9} \\
@@ -168,13 +168,13 @@ Key activities during market entry:
 \begin{tikzpicture}[node distance=2.5cm]
     % Central node
     \node[circle,draw=corporate-blue,fill=corporate-lightblue,minimum size=2cm,align=center] (center) {\bfseries Market\\Entry};
-    
+
     % Surrounding activities
-    \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,above of=center] (marketing) {Marketing\\Campaign};
-    \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,right of=center] (sales) {Sales\\Launch};
-    \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,below of=center] (onboard) {Customer\\Onboarding};
-    \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,left of=center] (partner) {Partnership\\Development};
-    
+    \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,above of=center,align=center] (marketing) {Marketing\\Campaign};
+    \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,right of=center,align=center] (sales) {Sales\\Launch};
+    \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,below of=center,align=center] (onboard) {Customer\\Onboarding};
+    \node[rectangle,draw=corporate-blue,fill=corporate-lightgrey,left of=center,align=center] (partner) {Partnership\\Development};
+
     % Connections
     \draw[->,thick,corporate-blue] (center) -- (marketing);
     \draw[->,thick,corporate-blue] (center) -- (sales);
@@ -223,7 +223,7 @@ Series A Fundraising & & & \checkmark & \checkmark & \checkmark & \\
         (19,48) (20,50) (21,52) (22,54) (23,56) (24,58)
     };
     \addlegendentry{Total Team Size}
-    
+
     \addplot[color=accent-green,mark=square*,thick] coordinates {
         (1,2) (2,3) (3,4) (4,5) (5,6) (6,7)
         (7,10) (8,12) (9,14) (10,15) (11,16) (12,16)
@@ -231,7 +231,7 @@ Series A Fundraising & & & \checkmark & \checkmark & \checkmark & \\
         (19,22) (20,23) (21,24) (22,25) (23,26) (24,28)
     };
     \addlegendentry{Technical Team}
-    
+
     \addplot[color=accent-orange,mark=triangle*,thick] coordinates {
         (1,1) (2,1) (3,2) (4,2) (5,3) (6,4)
         (7,4) (8,5) (9,6) (10,7) (11,8) (12,10)

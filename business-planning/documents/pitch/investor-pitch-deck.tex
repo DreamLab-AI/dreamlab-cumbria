@@ -14,8 +14,9 @@
 \usepackage{booktabs}
 \usepackage{siunitx}
 \usepackage{eurosym}
-\usepackage{fontspec}
+\usepackage{lmodern}
 \usepackage{microtype}
+\usepackage{pgf-pie}
 
 % TikZ libraries
 \usetikzlibrary{shapes,arrows,positioning,calc,patterns,decorations.pathreplacing,shadows}
@@ -36,8 +37,8 @@
 \setbeamercolor{block body}{bg=corporate-lightblue!10}
 
 % Font setup
-\setmainfont{TeX Gyre Heros}
-\setsansfont{TeX Gyre Heros}
+% \setmainfont{TeX Gyre Heros}
+% \setsansfont{TeX Gyre Heros}
 
 % Remove navigation symbols
 \setbeamertemplate{navigation symbols}{}
@@ -54,7 +55,7 @@
     \end{beamercolorbox}%
     \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
         \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
-        \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+        \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
     \end{beamercolorbox}}%
     \vskip0pt%
 }
@@ -64,7 +65,6 @@
     group-separator={,},
     group-minimum-digits=3
 }
-\newcommand{\pounds}[1]{\pounds\num{#1}}
 
 % Title information
 \title{Business Excellence Initiative}
@@ -92,7 +92,7 @@
 \column{0.5\textwidth}
 \begin{block}{The Opportunity}
 \begin{itemize}
-    \item \pounds{15B} UK professional education market
+    \item \pounds 15 billion UK professional education market
     \item 45\% annual growth in online learning
     \item Underserved mid-career professionals
     \item Scalable SaaS platform
@@ -102,9 +102,9 @@
 \column{0.5\textwidth}
 \begin{block}{The Ask}
 \begin{itemize}
-    \item Raising \pounds{5M} Series A
+    \item Raising \pounds 5 million Series A
     \item 20\% equity stake
-    \item \pounds{25M} pre-money valuation
+    \item \pounds 25 million pre-money valuation
     \item Use: Product development \& market expansion
 \end{itemize}
 \end{block}
@@ -126,20 +126,20 @@
         \Large\textbf{78\% of professionals struggle to find}\\
         \Large\textbf{relevant, high-quality upskilling opportunities}
     };
-    
+
     % Supporting issues
     \node[circle,draw=corporate-blue,fill=corporate-lightblue!30,minimum size=2.5cm,align=center] at (-4,0) {
         \textbf{Outdated}\\Content
     };
-    
+
     \node[circle,draw=corporate-blue,fill=corporate-lightblue!30,minimum size=2.5cm,align=center] at (0,0) {
         \textbf{Poor}\\Engagement
     };
-    
+
     \node[circle,draw=corporate-blue,fill=corporate-lightblue!30,minimum size=2.5cm,align=center] at (4,0) {
         \textbf{No Career}\\Impact
     };
-    
+
     % Arrows
     \draw[->,thick,corporate-grey] (-4,1.2) -- (-2,2.3);
     \draw[->,thick,corporate-grey] (0,1.2) -- (0,2.3);
@@ -158,7 +158,7 @@
 \begin{frame}{Our Solution}
 \begin{columns}
 \column{0.6\textwidth}
-\includegraphics[width=\textwidth]{platform-mockup.png}
+% \includegraphics[width=\textwidth]{platform-mockup.png}
 
 \column{0.4\textwidth}
 \begin{block}{AI-Powered Learning Platform}
@@ -216,30 +216,30 @@
 \begin{center}
 \begin{tikzpicture}[scale=0.8]
     % Segment circles
-    \node[circle,draw=corporate-blue,fill=corporate-lightblue!30,minimum size=3cm] at (0,2) {
-        \textbf{Tech}\\Professionals\\(35\%)
-    };
-    
-    \node[circle,draw=corporate-blue,fill=corporate-lightblue!30,minimum size=3cm] at (4,2) {
-        \textbf{Finance}\\Sector\\(25\%)
-    };
-    
-    \node[circle,draw=corporate-blue,fill=corporate-lightblue!30,minimum size=3cm] at (8,2) {
-        \textbf{Healthcare}\\Workers\\(20\%)
-    };
-    
-    \node[circle,draw=corporate-blue,fill=corporate-lightblue!30,minimum size=3cm] at (2,-1) {
-        \textbf{Creative}\\Industries\\(10\%)
-    };
-    
-    \node[circle,draw=corporate-blue,fill=corporate-lightblue!30,minimum size=3cm] at (6,-1) {
-        \textbf{Other}\\Sectors\\(10\%)
-    };
-    
+    \node[circle,draw=corporate-blue,fill=corporate-lightblue!30,minimum size=3cm,align=center] at (0,2) {
+            \textbf{Tech}\\Professionals\\(35\%)
+        };
+
+    \node[circle,draw=corporate-blue,fill=corporate-lightblue!30,minimum size=3cm,align=center] at (4,2) {
+            \textbf{Finance}\\Sector\\(25\%)
+        };
+
+    \node[circle,draw=corporate-blue,fill=corporate-lightblue!30,minimum size=3cm,align=center] at (8,2) {
+            \textbf{Healthcare}\\Workers\\(20\%)
+        };
+
+    \node[circle,draw=corporate-blue,fill=corporate-lightblue!30,minimum size=3cm,align=center] at (2,-1) {
+            \textbf{Creative}\\Industries\\(10\%)
+        };
+
+    \node[circle,draw=corporate-blue,fill=corporate-lightblue!30,minimum size=3cm,align=center] at (6,-1) {
+            \textbf{Other}\\Sectors\\(10\%)
+        };
+
     % TAM box
-    \node[rectangle,draw=accent-green,fill=accent-green!20,line width=2pt,minimum width=8cm,minimum height=1.5cm] at (4,-3.5) {
-        \Large\textbf{TAM: \pounds{4.2B} | SAM: \pounds{1.8B} | SOM: \pounds{180M}}
-    };
+    \node[rectangle,draw=accent-green,fill=accent-green!20,line width=2pt,minimum width=8cm,minimum height=1.5cm,align=center] at (4,-3.5) {
+            \Large\textbf{TAM: \pounds 4.2B | SAM: \pounds 1.8B | SOM: \pounds 180M}
+        };
 \end{tikzpicture}
 \end{center}
 \end{frame}
@@ -251,15 +251,15 @@
 \column{0.5\textwidth}
 \begin{block}{B2C Subscriptions}
 \begin{itemize}
-    \item Basic: \pounds{29/month
-    \item Professional: \pounds{79/month
-    \item Premium: \pounds{149/month
+    \item Basic: \pounds 29/month
+        \item Professional: \pounds 79/month
+        \item Premium: \pounds 149/month
 \end{itemize}
 \end{block}
 
 \begin{block}{B2B Enterprise}
 \begin{itemize}
-    \item Team licences: \pounds{99/user/month
+    \item Team licences: \pounds 99/user/month
     \item Custom content creation
     \item White-label solutions
 \end{itemize}
@@ -291,8 +291,8 @@
 \toprule
 \textbf{Metric} & \textbf{Current} & \textbf{Target (Year 2)} \\
 \midrule
-Customer Acquisition Cost (CAC) & \pounds{150} & \pounds{100} \\
-Customer Lifetime Value (CLV) & \pounds{1,200} & \pounds{2,400} \\
+Customer Acquisition Cost (CAC) & \pounds 150 & \pounds 100 \\
+Customer Lifetime Value (CLV) & \pounds 1,200 & \pounds 2,400 \\
 CLV:CAC Ratio & 8:1 & 24:1 \\
 Gross Margin & 75\% & 85\% \\
 Monthly Churn Rate & 5\% & 2.5\% \\
@@ -328,7 +328,7 @@ Monthly Churn Rate & 5\% & 2.5\% \\
 \begin{center}
 \begin{tikzpicture}
     \node[circle,draw=accent-orange,fill=accent-orange!20,line width=3pt,minimum size=3cm,align=center] {
-        \LARGE\textbf{\pounds{150K}}\\[0.3em]
+        \LARGE\textbf{\pounds 150K}\\[0.3em]
         \large MRR
     };
 \end{tikzpicture}
@@ -359,7 +359,7 @@ Monthly Churn Rate & 5\% & 2.5\% \\
 \column{0.5\textwidth}
 \begin{block}{Sarah Chen - Tech Professional}
 \centering
-\includegraphics[width=0.4\textwidth]{avatar1.png}\\
+% \includegraphics[width=0.4\textwidth]{avatar1.png}\\
 \vspace{0.5em}
 \textit{"Promoted to Senior Developer after completing the advanced React course. 40\% salary increase!"}
 \end{block}
@@ -367,7 +367,7 @@ Monthly Churn Rate & 5\% & 2.5\% \\
 \column{0.5\textwidth}
 \begin{block}{James Williams - Finance Manager}
 \centering
-\includegraphics[width=0.4\textwidth]{avatar2.png}\\
+% \includegraphics[width=0.4\textwidth]{avatar2.png}\\
 \vspace{0.5em}
 \textit{"The data analytics programme transformed my career. Now leading digital transformation at my firm."}
 \end{block}
@@ -389,7 +389,7 @@ Monthly Churn Rate & 5\% & 2.5\% \\
     \node[trapezium,draw=corporate-blue,fill=corporate-lightblue!30,minimum width=6cm,minimum height=1cm,below of=aware] (interest) {Interest: Free Courses, Webinars, Assessments};
     \node[trapezium,draw=corporate-blue,fill=corporate-lightblue!30,minimum width=4cm,minimum height=1cm,below of=interest] (convert) {Conversion: Free Trial, Onboarding};
     \node[trapezium,draw=corporate-blue,fill=corporate-lightblue!30,minimum width=3cm,minimum height=1cm,below of=convert] (retain) {Retention: Success Coaching};
-    
+
     % Metrics
     \node[right of=aware,xshift=3cm] {\textbf{100K monthly visitors}};
     \node[right of=interest,xshift=2.5cm] {\textbf{15\% sign-up rate}};
@@ -410,7 +410,7 @@ Industry-Specific Content & \checkmark & \texttimes & \checkmark \\
 Career Coaching & \checkmark & \texttimes & \texttimes \\
 Outcome Guarantee & \checkmark & \texttimes & \texttimes \\
 Enterprise Solutions & \checkmark & \checkmark & \texttimes \\
-Price Point & \textbf{\pounds{79}} & \pounds{199} & \pounds{49} \\
+Price Point & \textbf{\pounds 79} & \pounds 199 & \pounds 49 \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -427,7 +427,7 @@ Only platform combining AI-powered personalisation with guaranteed career outcom
 \begin{columns}
 \column{0.33\textwidth}
 \begin{center}
-\includegraphics[width=0.6\textwidth]{ceo.png}\\
+% \includegraphics[width=0.6\textwidth]{ceo.png}\\
 \textbf{Jane Smith}\\
 CEO \& Co-founder\\
 \small{Ex-Google, Stanford MBA\\15 years EdTech}
@@ -435,7 +435,7 @@ CEO \& Co-founder\\
 
 \column{0.33\textwidth}
 \begin{center}
-\includegraphics[width=0.6\textwidth]{cto.png}\\
+% \includegraphics[width=0.6\textwidth]{cto.png}\\
 \textbf{David Kumar}\\
 CTO \& Co-founder\\
 \small{Ex-Amazon, MIT CS\\AI/ML Expert}
@@ -443,7 +443,7 @@ CTO \& Co-founder\\
 
 \column{0.33\textwidth}
 \begin{center}
-\includegraphics[width=0.6\textwidth]{cmo.png}\\
+% \includegraphics[width=0.6\textwidth]{cmo.png}\\
 \textbf{Lisa Johnson}\\
 CMO\\
 \small{Ex-LinkedIn\\Growth Marketing}
@@ -482,12 +482,12 @@ CMO\\
         (1,1.2) (2,4.5) (3,12) (4,22) (5,28)
     };
     \addlegendentry{Revenue}
-    
+
     \addplot[color=accent-green,mark=*,thick] coordinates {
         (1,0.3) (2,1.8) (3,6) (4,13.2) (5,19.6)
     };
     \addlegendentry{Gross Profit}
-    
+
     \addplot[color=accent-orange,mark=triangle*,thick] coordinates {
         (1,-0.8) (2,0.2) (3,2.4) (4,6.6) (5,11.2)
     };
@@ -523,11 +523,11 @@ CMO\\
 \column{0.5\textwidth}
 \begin{block}{Investment Allocation}
 \begin{itemize}
-    \item \textbf{\pounds{2M}} - Product \& AI development
-    \item \textbf{\pounds{1.5M}} - Customer acquisition
-    \item \textbf{\pounds{750K}} - Key hires (20 people)
-    \item \textbf{\pounds{500K}} - Infrastructure
-    \item \textbf{\pounds{250K}} - Working capital
+    \item \textbf{\pounds 2M} - Product \& AI development
+    \item \textbf{\pounds 1.5M} - Customer acquisition
+    \item \textbf{\pounds 750K} - Key hires (20 people)
+    \item \textbf{\pounds 500K} - Infrastructure
+    \item \textbf{\pounds 250K} - Working capital
 \end{itemize}
 \end{block}
 \end{columns}
@@ -540,8 +540,8 @@ CMO\\
 \column{0.5\textwidth}
 \begin{block}{The Deal}
 \begin{itemize}
-    \item \textbf{Amount}: \pounds{5M}
-    \item \textbf{Valuation}: \pounds{25M} pre-money
+    \item \textbf{Amount}: \pounds 5M
+        \item \textbf{Valuation}: \pounds 25M pre-money
     \item \textbf{Type}: Series A Preferred
     \item \textbf{Board Seats}: 1 investor seat
     \item \textbf{Use}: Growth \& expansion

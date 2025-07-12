@@ -33,7 +33,7 @@
 \RequirePackage{amssymb}
 \RequirePackage{siunitx}
 \RequirePackage{eurosym}
-\RequirePackage{fontspec}
+\RequirePackage{lmodern}
 \RequirePackage{microtype}
 \RequirePackage[backend=biber,style=authoryear,citestyle=authoryear,natbib=true,sorting=nyt,maxbibnames=99]{biblatex}
 \RequirePackage{csquotes}
@@ -66,9 +66,9 @@
 
 % Font configuration
 % Comment out custom fonts if not available
-% \setmainfont{TeX Gyre Termes}
-% \setsansfont{TeX Gyre Heros}
-% \setmonofont{TeX Gyre Cursor}
+% \setmainfont{Times New Roman}
+% \setsansfont{Arial}
+% \setmonofont{Courier New}
 
 % Page geometry
 \geometry{
