@@ -2,19 +2,26 @@
 
 \subsection{Location and Setting}
 
-DreamLab is situated on a picturesque 5-acre plot in the Welsh countryside, offering:
+DreamLab is situated on a 1.5-acre plot in Eskdale Green, Cumbria\index{Cumbria}\index{Eskdale Green}, offering:
 
 \begin{itemize}
-    \item Strategic location: 45 minutes from Cardiff, accessible to London (2.5 hours by train)
-    \item Inspiring natural environment fostering creativity and focus
-    \item Purpose-built facilities designed for immersive technology training
-    \item High-speed fiber connectivity (10Gbps) enabling remote collaboration
-    \item Secure campus with 24/7 access for residential programs
+    \item Strategic location: 10 minutes from the Sellafield\index{Sellafield} nuclear site, providing a unique focus for engineering and simulation training.
+    \item Inspiring natural environment within the Lake District National Park\index{Lake District National Park}, fostering creativity and focus.
+    \item A unique blend of high-tech lab space and comfortable, modern accommodation.
+    \item High-speed fiber connectivity (10Gbps) enabling global collaboration.
+    \item A secure, private campus ideal for residential programs.
 \end{itemize}
 
-\subsection{Virtual Production Facility}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{media/aerialView.png}
+    \caption{Aerial view of the DreamLab campus in Eskdale Green.}
+    \label{fig:aerial-view}
+\end{figure}
 
-\subsubsection{LED Volume Stage}
+\subsection{Virtual Production Facility\index{Virtual Production}}
+
+\subsubsection{LED Volume Stage\index{LED Volume}}
 
 \begin{labspec}
 LED Wall System & 6m × 2.5m, 2.6mm pixel pitch, HDR & 1 & \pounds{180,000} \\
@@ -24,7 +31,7 @@ Cinema Cameras & RED V-RAPTOR, ARRI Mini LF & 2 & \pounds{120,000} \\
 Lighting Grid & ARRI SkyPanel, Aputure fixtures & Set & \pounds{35,000} \\
 \end{labspec}
 
-\subsubsection{Motion Capture Studio}
+\subsubsection{Motion Capture Studio\index{Motion Capture}}
 
 \begin{itemize}
     \item 12m × 8m capture volume with 24 Vicon cameras
@@ -36,22 +43,22 @@ Lighting Grid & ARRI SkyPanel, Aputure fixtures & Set & \pounds{35,000} \\
 
 \subsection{Creative Technology Labs}
 
-\subsubsection{Gaussian Splatting \& Neural Rendering Lab}
+\subsubsection{Gaussian Splatting \& Neural Rendering Lab\index{Gaussian Splatting}\index{Neural Rendering}}
 
 \begin{center}
 \begin{tikzpicture}[scale=0.8]
     % Capture Area
     \draw[thick] (0,0) rectangle (4,3);
     \node[align=center] at (2,1.5) {\textbf{Capture Rig}\\48-camera array\\Photogrammetry};
-    
+
     % Processing Station
     \draw[thick] (4.5,0) rectangle (8.5,3);
     \node[align=center] at (6.5,1.5) {\textbf{Processing}\\NVIDIA DGX\\Neural rendering};
-    
+
     % Review Area
     \draw[thick] (9,0) rectangle (13,3);
     \node[align=center] at (11,1.5) {\textbf{Review Station}\\VR/AR headsets\\Holographic displays};
-    
+
     % Arrows showing workflow
     \draw[thick,->] (4,1.5) -- (4.5,1.5);
     \draw[thick,->] (8.5,1.5) -- (9,1.5);
@@ -67,7 +74,7 @@ Equipment includes:
     \item Custom software pipeline for gaussian splatting workflows
 \end{itemize}
 
-\subsubsection{Telepresence \& XR Laboratory}
+\subsubsection{Telepresence \& XR Laboratory\index{Telepresence}\index{XR (Extended Reality)}}
 
 \begin{itemize}
     \item Microsoft HoloLens 2 development kits (10 units)
@@ -98,6 +105,13 @@ Haptic Devices & Force feedback for CAE interaction & 4 & \pounds{12,000} \\
     \item AI/ML: TensorFlow, PyTorch, CUDA toolkit, ComfyUI
     \item Collaboration: Perforce, Shotgrid, ftrack, Slack
 \end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{media/labview3.png}
+    \caption{The Engineering Simulation and Visualization Suite.}
+    \label{fig:lab-view-3}
+\end{figure}
 
 \subsection{Drone Technology Center}
 
@@ -145,23 +159,23 @@ Autonomous & PX4 development platforms & Computer vision, AI navigation \\
 \begin{tikzpicture}[scale=0.7]
     % Main Building Layout
     \draw[thick] (0,0) rectangle (14,10);
-    
+
     % VP Stage
     \draw[thick] (0.5,0.5) rectangle (6.5,4.5);
     \node[align=center] at (3.5,2.5) {\textbf{Virtual Production}\\Stage};
-    
+
     % MoCap Studio
     \draw[thick] (7,0.5) rectangle (13.5,4.5);
     \node[align=center] at (10.25,2.5) {\textbf{Motion Capture}\\Studio};
-    
+
     % Creative Labs
     \draw[thick] (0.5,5) rectangle (4.5,9.5);
     \node[align=center] at (2.5,7.25) {\textbf{Creative}\\Labs};
-    
+
     % Engineering Suite
     \draw[thick] (5,5) rectangle (9,9.5);
     \node[align=center] at (7,7.25) {\textbf{Engineering}\\Visualization};
-    
+
     % Collaboration Hub
     \draw[thick] (9.5,5) rectangle (13.5,9.5);
     \node[align=center] at (11.5,7.25) {\textbf{Collaboration}\\Hub};
@@ -206,7 +220,7 @@ Grid Independence & 40-50\% overall average \\
 
 \subsubsection{Smart Residence Features}
 
-The renovated Welsh farmhouse combines traditional charm with cutting-edge technology:
+The renovated Cumbrian property combines traditional charm with cutting-edge technology:
 
 \begin{itemize}
     \item \textbf{Tech Amenities}: Gigabit WiFi, smart home automation, streaming studio

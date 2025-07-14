@@ -125,6 +125,10 @@
 \newcommand{\companyname}{DreamLab AI Consulting}
 \newcommand{\projectname}{AI Innovation Hub \& Holiday Retreat}
 
+% Subtitle command
+\newcommand{\subtitle}[1]{\def\@subtitle{#1}}
+\def\@subtitle{}
+
 % Financial formatting
 \sisetup{
     group-separator={,},
@@ -217,17 +221,18 @@
 \newcommand{\solarcarbonsaved}[1]{\textbf{CO2 Saved:} #1\par}
 
 % Lab equipment specification environment
+% Using a simpler table environment to avoid parsing issues
 \newenvironment{labspec}{%
-    \begin{table}[H]
-    \centering
-    \caption{AI Lab Equipment Specifications}
-    \begin{tabularx}{\textwidth}{@{}lXrr@{}}
+    \par\vspace{0.5em}
+    \noindent\textbf{\sffamily Lab Equipment Specifications}\par\vspace{0.3em}
+    \noindent\begin{tabular}{@{}p{3.5cm}p{7cm}rr@{}}
     \toprule
     \textbf{Equipment} & \textbf{Specifications} & \textbf{Quantity} & \textbf{Cost} \\
     \midrule
-}{\bottomrule
-    \end{tabularx}
-    \end{table}
+}{%
+    \bottomrule
+    \end{tabular}
+    \par\vspace{0.5em}
 }
 
 % Availability calendar command
@@ -250,18 +255,28 @@
 \renewcommand{\maketitle}{%
     \begin{titlepage}
         \centering
-        \vspace*{2cm}
+        \vspace*{1cm}
         {\Huge\bfseries\sffamily\color{dreamlab-purple}\@title\par}
+        \ifx\@subtitle\empty\else
+            \vspace{0.5cm}
+            {\Large\sffamily\color{dreamlab-dark}\@subtitle\par}
+        \fi
         \vspace{1.5cm}
+
+        \includegraphics[width=0.8\textwidth,height=0.4\textheight,keepaspectratio]{media/labview2.png}
+
+        \vspace{1.5cm}
+
         {\Large\sffamily\@author\par}
         \vspace{1cm}
         {\large\sffamily\@date\par}
         \vfill
+
         \begin{tikzpicture}
-            \node[rectangle,draw=dreamlab-purple,line width=2pt,minimum width=0.8\textwidth,minimum height=3cm,align=center] {
-                \Large\sffamily\companyname\\[0.5em]
-                \large\projectname\\[0.5em]
-                \normalsize\textit{Where AI Innovation Meets Sustainable Living}
+            \node[rectangle,draw=dreamlab-purple,line width=2pt,minimum width=0.8\textwidth,minimum height=2.5cm,align=center] {
+                \large\sffamily\companyname\\[0.5em]
+                \normalsize\projectname\\[0.5em]
+                \small\textit{Where AI Innovation Meets Sustainable Living}
             };
         \end{tikzpicture}
         \vfill

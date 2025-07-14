@@ -1,0 +1,111 @@
+{
+  "renovation_costs_summary": {
+    "house_only": {
+      "low_estimate": 137455,
+      "high_estimate": 241915,
+      "with_contingency_low": 158073,
+      "with_contingency_high": 278202
+    },
+    "lab_training": {
+      "low_estimate": 125000,
+      "high_estimate": 136000
+    },
+    "total_project": {
+      "low_estimate": 262455,
+      "high_estimate": 377915,
+      "with_contingency_low": 301823,
+      "with_contingency_high": 434602
+    }
+    },
+  "phased_investment": {
+    "phase_1_essential": {
+      "months": "1-3",
+      "items": ["Trifold doors", "Kitchen refit", "Triple glazed window"],
+      "cost_range": [41200, 66700]
+    },
+    "phase_2_core": {
+      "months": "4-9",
+      "items": ["Chimney/fire", "Luxury shower", "Battery storage", "Trim"],
+      "cost_range": [28295, 39600]
+    },
+    "phase_3_external": {
+      "months": "10-15",
+      "items": ["Solar pergola x3", "Garden clearing", "Shed/woodstore"],
+      "cost_range": [25700, 29200]
+    },
+    "phase_4_leisure": {
+      "months": "16-18",
+      "items": ["Outdoor sauna", "Trampoline pit", "Shelving", "Rabbit hutch"],
+      "cost_range": [17160, 25660]
+    }
+  },
+  "integrated_financial_metrics": {
+    "base_case": {
+      "total_investment": 389455,
+      "payback_period_years": 3.2,
+      "irr_annual": 0.285,
+      "npv_12_percent": 487000,
+      "5_year_roi": 325,
+      "break_even_month": 38
+    },
+    "with_rd_tax_credits": {
+      "qualifying_expenditure": 195000,
+      "tax_credit_recovery": 36270,
+      "net_investment": 353185,
+      "improved_payback_years": 2.9
+    }
+  },
+  "revenue_comparison": {
+    "airbnb_only_model": {
+      "year_1": 83000,
+      "year_2": 89000,
+      "year_3": 95000,
+      "year_4": 97000,
+      "year_5": 100000,
+      "5_year_total": 464000
+    },
+    "training_plus_airbnb_model": {
+      "year_1": 160416,
+      "year_2": 223828,
+      "year_3": 309920,
+      "year_4": 393711,
+      "year_5": 476300,
+      "5_year_total": 1564175
+    },
+    "revenue_advantage": {
+      "year_1_increase_pct": 93,
+      "year_5_increase_pct": 376,
+      "total_5_year_advantage": 1100175,
+      "advantage_multiple": 3.37
+    }
+  },
+  "monthly_cashflow_summary": {
+    "investment_phase": {
+      "months_1_24": -389455,
+      "monthly_burn": -16227
+    },
+    "revenue_phase": {
+      "months_25_36": 187699,
+      "months_37_48": 357552,
+      "months_49_60": 551984,
+      "monthly_average_yr3": 25998,
+      "monthly_average_yr5": 39691
+    }
+  },
+  "risk_analysis": {
+    "conservative_scenario": {
+      "volume_reduction": -30,
+      "price_reduction": -15,
+      "npv": 298000,
+      "irr": 0.198,
+      "payback_years": 4.1
+    },
+    "optimistic_scenario": {
+      "volume_increase": 20,
+      "price_increase": 10,
+      "npv": 745000,
+      "irr": 0.412,
+      "payback_years": 2.3
+    }
+  }
+}

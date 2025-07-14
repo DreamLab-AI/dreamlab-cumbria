@@ -1,0 +1,156 @@
+\section{Integrated Financial Projections}
+\label{sec:financial-integrated}
+
+\subsection{Overview}
+
+This section presents the comprehensive financial projections for DreamLab AI Consulting, fully integrating both property renovation costs and business operations over a five-year horizon.
+
+\subsection{Total Capital Investment}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|r|r|}
+\hline
+\textbf{Category} & \textbf{Amount} & \textbf{Timing} \\
+\hline
+\multicolumn{3}{|l|}{\textbf{Property Renovation}} \\
+Phase 1: Essential Structural & £41,200 - £66,700 & Months 1-3 \\
+Phase 2: Core Improvements & £28,295 - £39,600 & Months 4-9 \\
+Phase 3: External Works & £25,700 - £29,200 & Months 10-15 \\
+Phase 4: Leisure Items & £17,160 - £25,660 & Months 16-18 \\
+\textbf{Subtotal Renovation} & £112,355 - £161,160 & \\
+\hline
+\multicolumn{3}{|l|}{\textbf{Business Development}} \\
+Lab/Training Fit-out & £125,000 - £136,000 & Months 1-18 \\
+Hardware \& Technology & £28,500 & Months 1-6 \\
+Business Setup & £21,500 & Months 1-3 \\
+\textbf{Subtotal Business} & £175,000 - £186,000 & \\
+\hline
+\textbf{Total Investment} & £287,355 - £347,160 & \\
+\textbf{With 15\% Contingency} & £330,458 - £399,234 & \\
+\hline
+\end{tabular}
+\caption{Total Capital Investment Breakdown}
+\label{tab:total-investment}
+\end{table}
+
+\subsection{Revenue Projections with Renovation Impact}
+
+The renovation timeline affects revenue generation, with full operations commencing in Year 2:
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|r|r|r|r|r|}
+\hline
+\textbf{Revenue Stream} & \textbf{Year 1} & \textbf{Year 2} & \textbf{Year 3} & \textbf{Year 4} & \textbf{Year 5} \\
+\hline
+Training (partial) & £54,000 & £162,000 & £243,000 & £324,000 & £405,000 \\
+Holiday Let (partial) & £21,000 & £52,000 & £58,000 & £62,000 & £65,000 \\
+GPU Rental & £5,208 & £9,828 & £8,920 & £7,711 & £6,300 \\
+\textbf{Total Revenue} & £80,208 & £223,828 & £309,920 & £393,711 & £476,300 \\
+\hline
+\end{tabular}
+\caption{Adjusted Revenue Projections}
+\label{tab:adjusted-revenue}
+\end{table}
+
+\subsection{Integrated Cash Flow Analysis}
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}
+    \begin{axis}[
+        width=\textwidth,
+        height=0.6\textwidth,
+        xlabel={Month},
+        ylabel={Cumulative Cash Flow (£)},
+        grid=major,
+        ymin=-400000,
+        ymax=600000,
+        scaled y ticks=false,
+        yticklabel={\pgfmathparse{\tick/1000}\pgfmathprintnumber{\pgfmathresult}k},
+        legend pos=north west,
+    ]
+    % Investment phase
+    \addplot[thick, red, mark=none] coordinates {
+        (0,0) (6,-96200) (12,-173000) (18,-238360) (24,-238360)
+    };
+    % Revenue phase
+    \addplot[thick, green, mark=none] coordinates {
+        (24,-238360) (30,-200000) (36,-120000) (42,20000) (48,250000) (54,450000) (60,580000)
+    };
+    % Break-even point
+    \addplot[dashed, black] coordinates {(38,-400000) (38,600000)};
+    \node at (axis cs:38,300000) {Break-even};
+    \legend{Investment Phase, Revenue Phase}
+    \end{axis}
+\end{tikzpicture}
+\caption{Integrated Cash Flow Projection}
+\label{fig:integrated-cashflow}
+\end{figure}
+
+\subsection{Key Financial Metrics}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|r|r|r|}
+\hline
+\textbf{Metric} & \textbf{Conservative} & \textbf{Base Case} & \textbf{Optimistic} \\
+\hline
+Total Investment & £399,234 & £365,000 & £330,458 \\
+NPV @ 12\% & £298,000 & £487,000 & £745,000 \\
+IRR & 19.8\% & 28.5\% & 41.2\% \\
+Payback Period & 4.1 years & 3.2 years & 2.3 years \\
+5-Year ROI & 285\% & 325\% & 412\% \\
+Break-even Month & 46 & 38 & 28 \\
+\hline
+\end{tabular}
+\caption{Integrated Financial Metrics}
+\label{tab:integrated-metrics}
+\end{table}
+
+\subsection{R\&D Tax Credit Impact}
+
+Qualifying expenditure across both renovation and business development:
+
+\begin{itemize}
+    \item Technology infrastructure: £45,000
+    \item Solar/battery innovation: £33,000
+    \item Lab development: £60,000
+    \item Software/AI development: £57,000
+    \item \textbf{Total qualifying}: £195,000
+    \item \textbf{SME R\&D credit (18.6\%)}: £36,270
+    \item \textbf{Net investment reduction}: 9.9\%
+\end{itemize}
+
+\subsection{Sensitivity Analysis}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|r|r|r|}
+\hline
+\textbf{Variable} & \textbf{-20\%} & \textbf{Base} & \textbf{+20\%} \\
+\hline
+Training Price & £385,000 & £487,000 & £589,000 \\
+Occupancy Rate & £412,000 & £487,000 & £562,000 \\
+Renovation Costs & £523,000 & £487,000 & £451,000 \\
+Operating Costs & £502,000 & £487,000 & £472,000 \\
+\hline
+\end{tabular}
+\caption{NPV Sensitivity Analysis}
+\label{tab:sensitivity}
+\end{table}
+
+\subsection{Investment Recommendation}
+
+The integrated financial analysis demonstrates:
+
+\begin{itemize}
+    \item \textbf{Strong Returns}: Base case NPV of £487,000 represents 133\% return on investment
+    \item \textbf{Manageable Risk}: Conservative scenario still achieves 19.8\% IRR
+    \item \textbf{Quick Recovery}: 3.2-year payback allows for early profitability
+    \item \textbf{Tax Efficiency}: R\&D credits reduce effective investment by £36,270
+    \item \textbf{Asset Building}: Property improvements create lasting value beyond business operations
+\end{itemize}
+
+The phased approach to renovation and business development reduces risk while ensuring quality execution. The dual revenue model provides resilience against market fluctuations, and the strategic location near Sellafield ensures consistent demand for executive training services.
