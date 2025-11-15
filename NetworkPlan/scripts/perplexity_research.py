@@ -93,7 +93,7 @@ Deliverable: Component list with part numbers, specs, UK pricing including Black
 }
 
 
-def query_perplexity(prompt: str, model: str = "llama-3.1-sonar-huge-128k-online") -> Dict:
+def query_perplexity(prompt: str, model: str = "sonar-pro") -> Dict:
     """
     Query Perplexity API with given prompt.
 
